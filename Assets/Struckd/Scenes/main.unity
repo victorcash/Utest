@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 8a663d9f543ff704a8f8058ca1ab337f, type: 2}
+  database: {fileID: 11400000, guid: 201316573c8822d4aaa287bbee4191d3, type: 2}
 --- !u!4 &1312188738
 Transform:
   m_ObjectHideFlags: 0

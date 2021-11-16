@@ -64,16 +64,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Struckd\Scripts\GameConfig.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Enums\Faction.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Enums\GameMode.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\TankBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GameService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumer.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IFaction.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IFactory.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IKillable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlacable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlayable.cs" />
+    <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GameConfig.cs" />
+    <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GamePlayElementDatabase.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
