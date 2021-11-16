@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{451B6F48-32F5-F154-C60A-C3068398F9F7}</ProjectGuid>
+    <ProjectGuid>{9C868B72-A056-5F00-57EE-FAD8406D69BC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,23 +64,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Packages\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-    <Compile Include="Assets\Packages\Joystick Pack\Examples\JoystickSetterExample.cs" />
-    <Compile Include="Assets\Packages\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\Packages\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\Packages\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
-    <Compile Include="Assets\Packages\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Packages\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Demo\Pokemon\Pokemon.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Demo\Users\User.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Scripts\Core\GraphApi.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Scripts\Core\HttpHandler.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Scripts\Core\Introspection.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Scripts\EventCallbacks\AllEventInfo.cs" />
-    <Compile Include="Assets\Packages\graphQl-client\Scripts\EventCallbacks\Event.cs" />
-    <None Include="Assets\Packages\JsonDotNet\link.xml" />
-    <None Include="Assets\Packages\graphQl-client\Api Referenceschema.txt" />
-    <None Include="Assets\Packages\graphQl-client\Pokemonschema.txt" />
+    <Compile Include="Assets\Struckd\Scripts\GameConfig.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementBehaviour.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\TankBehaviour.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GameService.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumable.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumer.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IFactory.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IKillable.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlacable.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlayable.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -264,14 +257,14 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>C:/Users/Victor/UTest/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Victor/UTest/Assets/Packages/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>C:/Users/Victor/UTest/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -619,36 +612,36 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Victor/UTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{8228CD63-A26D-3A1B-EB7C-5C56F1D0603A}</Project>
+      <Project>{BA613456-DBDF-819C-4BA8-5A69E0DAFBD2}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
