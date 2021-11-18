@@ -2,16 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankBehaviour : GamePlayElementBehaviour, IKillable
+public class TankBehaviour : KillableGamePlayElementBehaviour
 {
-    public float hp;
-    public float hpMax;
 
-    public float GetHp() => hp;
-    public float GetHpMax() => hpMax;
-
-    public void ModifyHp(float val)
-    {
-        throw new System.NotImplementedException();
-    }
 }

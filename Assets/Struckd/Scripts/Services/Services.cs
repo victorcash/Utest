@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [ExecuteAlways]
-public class GameService : MonoBehaviour
+public class Services : MonoBehaviour
 {
     public GameConfig config;
     public static GameConfig Config;
@@ -12,6 +12,7 @@ public class GameService : MonoBehaviour
     public static CameraService Camera;
     public static PlayableService Playable;
     public static UiService Ui;
+    public static GamePlayElementService GamePlayElement;
 
     private void Awake() => Iniit();
     private void OnValidate() => Iniit();
@@ -22,5 +23,6 @@ public class GameService : MonoBehaviour
         Camera = new CameraService();
         Playable = new PlayableService();
         Ui = new UiService();
+        GamePlayElement = new GamePlayElementService();
     }
 }

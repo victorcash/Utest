@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: GamePlayElementDatabase
   m_EditorClassIdentifier: 
   allGamePlayElements:
-  - {fileID: 3308663002753623896, guid: f980af11753771e49a26f6396475e66f, type: 3}
+  - {fileID: 11400000, guid: 14e1f0b7c0ccce64a8e6eea80bbd9fc6, type: 2}
+  - {fileID: 11400000, guid: 14e1f0b7c0ccce64a8e6eea80bbd9fc6, type: 2}
+  - {fileID: 11400000, guid: 14e1f0b7c0ccce64a8e6eea80bbd9fc6, type: 2}
+  - {fileID: 11400000, guid: 14e1f0b7c0ccce64a8e6eea80bbd9fc6, type: 2}
+  - {fileID: 11400000, guid: 14e1f0b7c0ccce64a8e6eea80bbd9fc6, type: 2}

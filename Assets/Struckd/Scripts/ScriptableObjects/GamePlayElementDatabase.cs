@@ -5,5 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Struckd/GamePlayElementDatabase")]
 public class GamePlayElementDatabase : ScriptableObject
 {
-    public List<GamePlayElementBehaviour> allGamePlayElements;
+    public List<GamePlayElement> allGamePlayElements;
 }
+
+

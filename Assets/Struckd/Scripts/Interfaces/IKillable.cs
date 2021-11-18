@@ -4,7 +4,8 @@ using UnityEngine;
 
 public interface IKillable
 {
-    void ModifyHp(float val);
+    void SetHp(float val);
+    void SetHpMax(float val);
     float GetHp();
     float GetHpMax();
 
@@ -14,5 +15,6 @@ public static class IKillableExtensions
 {
     public static void Kill(this IKillable IKillable)
     {
+        
     }
 }

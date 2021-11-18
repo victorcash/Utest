@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CubeBehaviour : GamePlayElementBehaviour
+﻿public class CubeBehaviour : GamePlayElementBehaviour
 {
-
+    //come on, it's a cube
 }

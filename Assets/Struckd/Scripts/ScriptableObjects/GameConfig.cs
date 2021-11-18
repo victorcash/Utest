@@ -4,4 +4,5 @@ public class GameConfig : ScriptableObject
 {
     public int testVal;
     public float testFval;
+    public int CsvWidth;
 }
