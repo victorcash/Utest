@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testVal: 0
   testFval: 0
+  CsvWidth: 20

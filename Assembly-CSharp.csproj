@@ -64,11 +64,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Struckd\Scripts\Data\MapData.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\Faction.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\GameMode.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementBehaviour.cs" />
-    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementService.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\KillableGamePlayElementBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\TankBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumable.cs" />
@@ -81,12 +81,14 @@
     <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GamePlayElement.cs" />
     <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GamePlayElementDatabase.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\CameraService.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Services\GamePlayElementService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\PlayableService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\Services.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\UiService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\AppCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\EditCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />
+    <Compile Include="Assets\TestObject.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

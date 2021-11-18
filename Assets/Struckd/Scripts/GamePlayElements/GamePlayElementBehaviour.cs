@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Text;
 using UnityEngine;
 
 public class GamePlayElementBehaviour : MonoBehaviour
 {
     protected int elementInstanceId;
+    private bool isInit;
     public virtual Transform GetRootTransform() => transform;
-    protected virtual void Awake()
+    protected virtual void Start()
     {
-        
+        Init();
     }
     protected virtual void OnPlay()
     { 
@@ -19,7 +21,11 @@ public class GamePlayElementBehaviour : MonoBehaviour
     }
     public void Init()
     {
-        Services.GamePlayElement.Init(this, OnPlay, OnEdit);
+        if (!isInit)
+        {
+            isInit = true;
+            Services.GamePlayElement.Init(this, OnPlay, OnEdit);
+        }
     }
     public void InjectData(string entry)
     {
@@ -59,28 +65,41 @@ public class GamePlayElementBehaviour : MonoBehaviour
     public virtual string[] Serialize()
     {
         var entry = CSVHelper.CreateEmptyEntry();
-        entry.SetValue(CsvColumn.PlacableId, elementInstanceId);
-        entry.SetValue(CsvColumn.PosX, transform.position.x);
-        entry.SetValue(CsvColumn.PosY, transform.position.y);
-        entry.SetValue(CsvColumn.PosZ, transform.position.z);
-        entry.SetValue(CsvColumn.RotX, transform.rotation.eulerAngles.x);
-        entry.SetValue(CsvColumn.RotY, transform.rotation.eulerAngles.y);
-        entry.SetValue(CsvColumn.RotZ, transform.rotation.eulerAngles.z);
-        entry.SetValue(CsvColumn.ScalX, transform.localScale.x);
-        entry.SetValue(CsvColumn.ScalY, transform.localScale.y);
-        entry.SetValue(CsvColumn.ScalZ, transform.localScale.z);
+        entry.SetValue(elementInstanceId, CsvColumn.PlacableId);
+        entry.SetValue(transform.position.x, CsvColumn.PosX);
+        entry.SetValue(transform.position.y, CsvColumn.PosY);
+        entry.SetValue(transform.position.z, CsvColumn.PosZ);
+        entry.SetValue(transform.rotation.eulerAngles.x, CsvColumn.RotX);
+        entry.SetValue(transform.rotation.eulerAngles.y, CsvColumn.RotY);
+        entry.SetValue(transform.rotation.eulerAngles.z, CsvColumn.RotZ);
+        entry.SetValue(transform.localScale.x, CsvColumn.ScalX);
+        entry.SetValue(transform.localScale.y, CsvColumn.ScalY);
+        entry.SetValue(transform.localScale.z, CsvColumn.ScalZ);
         return entry;
     }
 }
 public static class ExtensionStringArray
 {
-    public static void SetValue<T>(this string[] entry, CsvColumn csvColumn, T value) where T : IConvertible
+    public static void SetValue<T>(this string[] entry, T value, CsvColumn csvColumn) where T : IConvertible
     {
         entry[(int)csvColumn] = value.ToString();
     }
     public static string GetValue(this string[] entry, CsvColumn csvColumn)
     {
         return entry[(int)csvColumn];
+    }
+    public static string ToSingleLine(this string[] entry)
+    {
+        var line = new StringBuilder();
+        for (int i = 0; i < entry.Length; i++)
+        {
+            line.Append(entry[i]);
+            if (i < entry.Length - 1)
+            { 
+                line.Append(",");
+            }
+        }
+        return line.ToString();
     }
 }
 

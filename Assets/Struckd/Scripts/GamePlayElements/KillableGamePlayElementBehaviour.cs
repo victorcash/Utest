@@ -19,7 +19,7 @@ public class KillableGamePlayElementBehaviour : GamePlayElementBehaviour, IKilla
     public override string[] Serialize()
     {
         var entry = base.Serialize();
-        entry.SetValue(CsvColumn.Hp, GetHp());
+        entry.SetValue(GetHp(), CsvColumn.Hp);
         return entry;
     }
     public override void Deserialize(string[] entry)
