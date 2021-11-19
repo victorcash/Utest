@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa7b8cdd5db833458806b84d41e291d, type: 3}
   m_Name: GamePlayElementCube
   m_EditorClassIdentifier: 
+  elementID: 1
   prefab: {fileID: 3308663002753623896, guid: f980af11753771e49a26f6396475e66f, type: 3}

@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 
-[ExecuteAlways]
 public class Services : MonoBehaviour
 {
+    [Header("SceneReferences")]
+    public Transform elementsRoot;
+
+    [Header("ScripableObjectRefereces")]
     public GameConfig config;
     public static GameConfig Config;
 
@@ -14,11 +17,13 @@ public class Services : MonoBehaviour
     public static UiService Ui;
     public static GamePlayElementService GamePlayElement;
 
+
     private void Awake() => Iniit();
     private void OnValidate() => Iniit();
     private void Iniit()
     {
         Config = config;
+        Config.elementsRoot = elementsRoot;
         Database = database;
         Camera = new CameraService();
         Playable = new PlayableService();

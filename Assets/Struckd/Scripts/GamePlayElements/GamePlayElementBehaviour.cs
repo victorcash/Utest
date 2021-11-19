@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GamePlayElementBehaviour : MonoBehaviour
 {
-    protected int elementInstanceId;
+    public int elementID;
     private bool isInit;
     public virtual Transform GetRootTransform() => transform;
     protected virtual void Start()
@@ -24,26 +24,21 @@ public class GamePlayElementBehaviour : MonoBehaviour
         if (!isInit)
         {
             isInit = true;
-            Services.GamePlayElement.Init(this, OnPlay, OnEdit);
+            Services.GamePlayElement.InitElement(this, OnPlay, OnEdit);
         }
     }
-    public void InjectData(string entry)
+    public void InjectData(string[] entry)
     {
-        Deserialize(entry.Split(','));
+        Deserialize(entry);
     }
     protected virtual void OnDestroy()
     {
-        Services.GamePlayElement.CleanUp(this, OnPlay, OnEdit);
+        Services.GamePlayElement.CleanUpElement(this, OnPlay, OnEdit);
     }
     public virtual void Remove()
     {
         Destroy(gameObject);
     }
-    public void SetElementInstanceId(int id)
-    {
-        elementInstanceId = id;
-    }
-    public int GetPlacableId() => elementInstanceId;
     public virtual void Deserialize(string[] entry)
     {
         transform.position = new Vector3(
@@ -65,7 +60,7 @@ public class GamePlayElementBehaviour : MonoBehaviour
     public virtual string[] Serialize()
     {
         var entry = CSVHelper.CreateEmptyEntry();
-        entry.SetValue(elementInstanceId, CsvColumn.PlacableId);
+        entry.SetValue(elementID, CsvColumn.ElementId);
         entry.SetValue(transform.position.x, CsvColumn.PosX);
         entry.SetValue(transform.position.y, CsvColumn.PosY);
         entry.SetValue(transform.position.z, CsvColumn.PosZ);
@@ -93,11 +88,8 @@ public static class ExtensionStringArray
         var line = new StringBuilder();
         for (int i = 0; i < entry.Length; i++)
         {
+            if(i != 0) line.Append(",");
             line.Append(entry[i]);
-            if (i < entry.Length - 1)
-            { 
-                line.Append(",");
-            }
         }
         return line.ToString();
     }
@@ -105,7 +97,7 @@ public static class ExtensionStringArray
 
 public enum CsvColumn
 { 
-    PlacableId = 0,
+    ElementId = 0,
     PosX = 1,
     PosY = 2,
     PosZ = 3,

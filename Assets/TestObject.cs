@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class TestObject : MonoBehaviour
 {
-    [ContextMenu(nameof(Test))]
-    public void Test()
+    [ContextMenu(nameof(Save))]
+    public void Save()
     {
         Services.GamePlayElement.SaveMapData();
+    }
+
+    [ContextMenu(nameof(Load))]
+    public void Load()
+    {
+        Services.GamePlayElement.LoadMapData();
     }
 }
