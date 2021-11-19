@@ -15,4 +15,39 @@ public class TestObject : MonoBehaviour
     {
         Services.GamePlayElement.LoadMapData();
     }
+
+    [ContextMenu(nameof(Clear))]
+    public void Clear()
+    {
+        Services.GamePlayElement.RemoveAllElements();
+    }
+    [ContextMenu(nameof(CreateUI))]
+    public void CreateUI()
+    {
+        TankBehaviour element = new TankBehaviour();
+
+        GamePlayElementBehaviour bb = element;
+        var interfaces = bb.GetType().GetInterfaces();
+
+        foreach (var xx in interfaces)
+        {
+            UnityEngine.Debug.Log(xx);
+        }
+    }
 }
+
+
+interface root
+{ 
+
+}
+
+
+interface sub : root
+{ 
+
+}
+
+//DO HP
+//DO HP UI
+//DO SOME COMBAT

@@ -12,9 +12,12 @@ public class Services : MonoBehaviour
     public GamePlayElementDatabase database;
     public static GamePlayElementDatabase Database;
 
+    public UiService ui;
+    public static UiService Ui;
+
     public static CameraService Camera;
     public static PlayableService Playable;
-    public static UiService Ui;
+
     public static GamePlayElementService GamePlayElement;
 
 
@@ -25,9 +28,9 @@ public class Services : MonoBehaviour
         Config = config;
         Config.elementsRoot = elementsRoot;
         Database = database;
+        Ui = ui;
         Camera = new CameraService();
         Playable = new PlayableService();
-        Ui = new UiService();
         GamePlayElement = new GamePlayElementService();
     }
 }
