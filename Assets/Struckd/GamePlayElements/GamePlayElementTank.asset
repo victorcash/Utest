@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: GamePlayElementTank
   m_EditorClassIdentifier: 
   elementID: 4
-  prefab: {fileID: 3308663002753623896, guid: f980af11753771e49a26f6396475e66f, type: 3}
-  editPanelUi: {fileID: 223330441557996607, guid: 9086009dcc35eab4a86cb09bdc30eaa7,
-    type: 3}
+  prefab: {fileID: 669123355868203091, guid: 7c2c72109b4fc62478ad045f56d106e8, type: 3}
