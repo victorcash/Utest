@@ -11,10 +11,10 @@ public interface IKillable
 
 }
 
-public static class IKillableExtensions
-{
-    public static void Kill(this IKillable IKillable)
-    {
+//public static class IKillableExtensions
+//{
+//    public static void Kill(this IKillable IKillable)
+//    {
         
-    }
-}
+//    }
+//}

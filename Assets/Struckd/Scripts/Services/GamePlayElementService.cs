@@ -64,12 +64,14 @@ public class GamePlayElementService
 #if UNITY_EDITOR
         string filePath = "Assets/Resources/" + "test.csv";
 #else
-        string filePath = Application.dataPath + "/" + csvPath + ".csv";
+        string filePath = Application.dataPath + "/" + ".csv";
 #endif
         StreamWriter outStream = File.CreateText(filePath);
         outStream.WriteLine(csv);
         outStream.Close();
+#if UNITY_EDITOR
         UnityEditor.AssetDatabase.Refresh();
+#endif
     }
 
     public string BuildHeader(Enum enumType)

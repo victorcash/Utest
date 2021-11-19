@@ -11,14 +11,8 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour
     {
         Init();
     }
-    protected virtual void OnPlay()
-    { 
-    
-    }
-    protected virtual void OnEdit()
-    { 
-    
-    }
+    protected virtual void OnPlay(){}
+    protected virtual void OnEdit(){}
     public void Init()
     {
         if (!isInit)

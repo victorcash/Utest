@@ -36,7 +36,8 @@ public enum CsvColumn
     ScalY = 8,
     ScalZ = 9,
     Hp = 10,
-    HpMax = 11
+    HpMax = 11,
+    Faction
 }
 
 public static class CSVHelper
