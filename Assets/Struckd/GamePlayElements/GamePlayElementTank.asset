@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa7b8cdd5db833458806b84d41e291d, type: 3}
   m_Name: GamePlayElementTank
   m_EditorClassIdentifier: 
-  elementID: 4
+  elementID: 1
   prefab: {fileID: 669123355868203091, guid: 7c2c72109b4fc62478ad045f56d106e8, type: 3}
+  elementIcon: {fileID: 0}
+  elementName: Tank

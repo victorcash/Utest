@@ -64,62 +64,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\External\Jetbrains.Annotations.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\External\MiniJSON.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Internal\ComponentMenuPaths.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Collections\SRList.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Components\SRAutoSingleton.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Components\SRMonoBehaviour.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Components\SRMonoBehaviourEx.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Components\SRSingleton.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Coroutines.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Extensions\FloatExtensions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Extensions\GameObjectExtensions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Extensions\IListExtensions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Extensions\NetFxExtensions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Extensions\StringExtensions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Extensions\TransformExtensions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\AssetUtil.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\Hierarchy.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\MethodReference.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\PropertyReference.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRDebugUtil.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRFileUtil.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRInstantiate.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRMath.Tweening.Functions.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRMath.Tweening.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRMath.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Helpers\SRReflection.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Service\Attributes.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Service\IAsyncService.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Service\SRDependencyServiceBase.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Service\SRSceneServiceBase.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Service\SRServiceBase.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\Service\SRServiceManager.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\ContentFitText.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\CopyLayoutElement.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\CopyPreferredSize.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\CopySizeIntoLayoutElement.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\DragHandle.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\FlashGraphic.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\InheritColour.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Layout\FlowLayoutGroup.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Layout\VirtualVerticalLayoutGroup.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\LongPressButton.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\ResponsiveBase.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\ResponsiveEnable.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\ResponsiveResize.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\SRNumberButton.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\SRNumberSpinner.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\SRRetinaScaler.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\SRSpinner.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\SRText.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\ScrollToBottomBehaviour.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\StyleComponent.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\StyleRoot.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\StyleSheet.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Unselectable.cs" />
-    <None Include="Assets\Plugins\StompyRobot\SRF\StompyRobot.SRF.asmdef" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\External\Jetbrains.Annotations.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\External\MiniJSON.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Internal\ComponentMenuPaths.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Collections\SRList.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Components\SRAutoSingleton.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Components\SRMonoBehaviour.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Components\SRMonoBehaviourEx.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Components\SRSingleton.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Coroutines.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Extensions\FloatExtensions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Extensions\GameObjectExtensions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Extensions\IListExtensions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Extensions\NetFxExtensions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Extensions\StringExtensions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Extensions\TransformExtensions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\AssetUtil.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\Hierarchy.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\MethodReference.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\PropertyReference.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRDebugUtil.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRFileUtil.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRInstantiate.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRMath.Tweening.Functions.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRMath.Tweening.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRMath.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Helpers\SRReflection.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Service\Attributes.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Service\IAsyncService.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Service\SRDependencyServiceBase.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Service\SRSceneServiceBase.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Service\SRServiceBase.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\Service\SRServiceManager.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\ContentFitText.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\CopyLayoutElement.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\CopyPreferredSize.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\CopySizeIntoLayoutElement.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\DragHandle.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\FlashGraphic.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\InheritColour.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Layout\FlowLayoutGroup.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Layout\VirtualVerticalLayoutGroup.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\LongPressButton.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\ResponsiveBase.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\ResponsiveEnable.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\ResponsiveResize.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\SRNumberButton.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\SRNumberSpinner.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\SRRetinaScaler.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\SRSpinner.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\SRText.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\ScrollToBottomBehaviour.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\StyleComponent.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\StyleRoot.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\StyleSheet.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Unselectable.cs" />
+    <None Include="Assets\Packages\StompyRobot\SRF\StompyRobot.SRF.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -312,17 +312,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

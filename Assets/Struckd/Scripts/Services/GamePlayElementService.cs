@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using UnityEngine;
 
@@ -67,14 +68,12 @@ public class GamePlayElementService
             csv.AppendLine(newEntry);
         }
 
-#if UNITY_EDITOR
-        string filePath = "Assets/Resources/" + "test.csv";
-#else
-        string filePath = Application.dataPath + "/" + ".csv";
-#endif
-        StreamWriter outStream = File.CreateText(filePath);
-        outStream.WriteLine(csv);
-        outStream.Close();
+        string filePath = Application.persistentDataPath + "/Maps/temp.csv";
+        var file = new FileInfo(filePath);
+        file.Directory.Create();
+        StreamWriter writer = File.CreateText(filePath);
+        writer.WriteLine(csv);
+        writer.Close();
 #if UNITY_EDITOR
         UnityEditor.AssetDatabase.Refresh();
 #endif
@@ -95,9 +94,12 @@ public class GamePlayElementService
     public void LoadMapData()
     {
         Services.GamePlayElement.RemoveAllElements();
-        var csv = Resources.Load("test") as TextAsset;
-        string[] entries = csv.text.Split(new string[] { "\r\n" }, StringSplitOptions.None);
-        //remove header and last 2 extra empty lines
+        string filePath = Application.persistentDataPath + "/Maps/temp.csv";
+        StreamReader reader = new StreamReader(filePath);
+        var csv = reader.ReadToEnd();
+        reader.Close();
+        string[] entries = csv.Split(new char[] { '\n' });
+        //remove header, remove last 2 lines
         entries = entries.RemoveAt(0);
         entries = entries.RemoveAt(entries.Length -1);
         entries = entries.RemoveAt(entries.Length -1);

@@ -9,7 +9,7 @@ public class TestUiObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Services.ElementPlacer.PlaceElement(2);
+        Services.ElementPlacer.QueueElement(1);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -22,14 +22,5 @@ public class TestUiObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     private void Update()
     {
-        var count = ExtensionUI.PointerOverUIObjectsCount();
     }
-
-    //How many ui it's currently casting?
-
-
-
-
-
-
 }

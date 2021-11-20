@@ -64,23 +64,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\ApiSignup.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\ApiSignupWindow.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\IntegrityChecking.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\Migrations.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\ProfilerCameraListenerEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditor.Compiler.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditor.Resources.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditorPaths.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditorStrings.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRIntegrityCheckWindow.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SRInternalEditorUtil.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SROptionsWindow.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SettingsEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\SettingsWindow.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\WelcomeWindow.cs" />
-    <None Include="Assets\Plugins\StompyRobot\SRDebugger\Scripts\Editor\StompyRobot.SRDebugger.Editor.asmdef" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\ApiSignup.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\ApiSignupWindow.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\IntegrityChecking.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\Migrations.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\ProfilerCameraListenerEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditor.Compiler.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditor.Resources.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditorPaths.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRDebugEditorStrings.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRIntegrityCheckWindow.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SRInternalEditorUtil.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SROptionsWindow.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SettingsEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\SettingsWindow.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\WelcomeWindow.cs" />
+    <None Include="Assets\Packages\StompyRobot\SRDebugger\Scripts\Editor\StompyRobot.SRDebugger.Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -279,17 +279,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

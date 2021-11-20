@@ -7,15 +7,32 @@ using UnityEngine;
 public class UiService : ScriptableObject
 {
     public InterfaceUiDictionary interfaceEditUiLookup = new InterfaceUiDictionary();
+    public ElementCardUi elementCardPrefab;
+    public ElementListUi elementListUiPrefab;
+    [NonSerialized] public ElementListUi elementListUi;
+    [NonSerialized] public Canvas editCanvas;
+
+
+    public void Init(Canvas editCanvas)
+    {
+        this.editCanvas = editCanvas;
+        elementListUi = Instantiate(elementListUiPrefab, editCanvas.transform);
+    }
 
     public void ToggleUIMode(GameMode gameMode)
     {
+
     }
 
 
     public void GetUiPrefab(Type type)
     { 
     
+    }
+
+    public void ToggleElementList(bool val)
+    {
+        elementListUi?.ToggleVisibility(val);
     }
 
 

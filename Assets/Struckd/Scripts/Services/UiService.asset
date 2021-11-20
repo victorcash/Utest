@@ -27,3 +27,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+  elementCardPrefab: {fileID: 5387152541482353892, guid: 4c90c62204b8a594b9099fee16366ba5,
+    type: 3}
+  elementListUiPrefab: {fileID: 566752402408048791, guid: 3d8a5eaf64476b64b8c72964468b8d0f,
+    type: 3}
+  elementListUi: {fileID: 0}
+  editCanvas: {fileID: 0}

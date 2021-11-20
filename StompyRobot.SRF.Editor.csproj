@@ -64,13 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\CopyLayoutElementEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\CopyPreferredSizeEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\LongPressButtonEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\SRNumberButtonEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\StyleComponentEditor.cs" />
-    <Compile Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\StyleSheetEditor.cs" />
-    <None Include="Assets\Plugins\StompyRobot\SRF\Scripts\UI\Editor\StompyRobot.SRF.Editor.asmdef" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\CopyLayoutElementEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\CopyPreferredSizeEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\LongPressButtonEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\SRNumberButtonEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\StyleComponentEditor.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\StyleSheetEditor.cs" />
+    <None Include="Assets\Packages\StompyRobot\SRF\Scripts\UI\Editor\StompyRobot.SRF.Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -269,17 +269,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

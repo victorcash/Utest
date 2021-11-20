@@ -21,24 +21,11 @@ public class TestObject : MonoBehaviour
     {
         Services.GamePlayElement.RemoveAllElements();
     }
-    [ContextMenu(nameof(CreateUI))]
-    public void CreateUI()
-    {
-        TankBehaviour element = new TankBehaviour();
-
-        GamePlayElementBehaviour bb = element;
-        var interfaces = bb.GetType().GetInterfaces();
-
-        foreach (var xx in interfaces)
-        {
-            UnityEngine.Debug.Log(xx);
-        }
-    }
 
     [ContextMenu(nameof(DragElement))]
     public void DragElement()
     {
-        Services.ElementPlacer.PlaceElement(2);
+        Services.ElementPlacer.QueueElement(2);
     }
 }
 

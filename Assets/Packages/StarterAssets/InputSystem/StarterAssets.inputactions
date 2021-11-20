@@ -43,7 +43,7 @@
                     "id": "552f3d3e-f032-49dd-b2c1-e9caac84ccde",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 }
             ],
             "bindings": [
@@ -226,7 +226,51 @@
                 {
                     "name": "",
                     "id": "4cfcc268-4d5a-4179-a5ba-25e74126a43d",
-                    "path": "<Pointer>/leftButton",
+                    "path": "<Pointer>/primaryTouch",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd1beb04-f78d-4a70-b9ad-16ab45401970",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "034fb18e-505e-4f7c-a9a0-db3ffbbf591a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3f2a083-f758-40b8-8788-0a6da5f40908",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94706e24-a162-452f-9ce5-d3d21fbb945a",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",

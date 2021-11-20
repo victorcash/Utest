@@ -6,4 +6,6 @@ public class GamePlayElement : ScriptableObject
 {
     public int elementID;
     public GamePlayElementBehaviour prefab;
+    public Sprite elementIcon;
+    public string elementName;
 }

@@ -271,7 +271,11 @@ public static class ExtensionUI
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-        eventDataCurrentPosition.position = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+    #if UNITY_EDITOR
+            eventDataCurrentPosition.position = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+    #else
+            eventDataCurrentPosition.position = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+    #endif
 #else
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 #endif
@@ -284,7 +288,12 @@ public static class ExtensionUI
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-        eventDataCurrentPosition.position = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+
+    #if UNITY_EDITOR
+            eventDataCurrentPosition.position = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+    #else
+                eventDataCurrentPosition.position = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+    #endif
 #else
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 #endif

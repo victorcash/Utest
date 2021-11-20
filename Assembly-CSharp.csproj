@@ -64,16 +64,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
-    <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
-    <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
-    <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
-    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
-    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
-    <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-    <Compile Include="Assets\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\Bezier.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\BezierControlPointMode.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\BezierCurve.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\BezierSpline.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\BezierSplineLength.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\BezierSplineOrientation.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\BezierSplineVertexPath.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Bezier\Line.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\CustomEasings\EaseFactory.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\ArrayExtension.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\BoundsExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\ColorExtension.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\GameObjectExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\IListExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\IntExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\LayerMaskExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\MonoBehaviourExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\RectExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\RectTransformExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\RendererExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\StringExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\Vector2Extensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\Vector2IntExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\Vector3Extensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Extensions\Vector3IntExtensions.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\CubicBezierUtility.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\EasingFunction.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\EventList.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\EventManager.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\ExtentionMethod.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\Math3D.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Helper\UnityWebRequestAwaiter.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\SerializableDictionary\Example\SerializableDictionaryExample.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\SerializableDictionary\Example\UserSerializableDictionaries.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\SerializableDictionary\SerializableDictionary.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\SerializableDictionary\SerializableHashSet.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Serialization\QuaternionSerializationSurrogate.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Serialization\SuperSerializer.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\Serialization\Vector3SerializationSurrogate.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\UI\DragableImage.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\UI\InvertedMaskImage.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\UI\ScrollRectExt.cs" />
+    <Compile Include="Assets\Packages\ExtensionMethod\UnityEditor\ScriptableObjectViewer.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
+    <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SROptions\SROptions.Attributes.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SROptions\SROptions.Test.cs" />
+    <Compile Include="Assets\Packages\StompyRobot\SROptions\SROptions.cs" />
     <Compile Include="Assets\Struckd\Scripts\CsvHelper.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\MapData.cs" />
     <Compile Include="Assets\Struckd\Scripts\ElementPlacer.cs" />
@@ -101,13 +157,40 @@
     <Compile Include="Assets\Struckd\Scripts\Services\UiService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\AppCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\EditCanvas.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\ElementCardUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\ElementListUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IKillableEditUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\MapFileAccessUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />
     <Compile Include="Assets\TestObject.cs" />
     <Compile Include="Assets\TestUiObject.cs" />
-    <None Include="Assets\StarterAssets\Environment\Shaders\Built-in_RP\Triplanar.shader" />
-    <None Include="Assets\StarterAssets\license.txt" />
-    <None Include="Assets\StarterAssets\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Packages\JsonDotNet\link.xml" />
+    <None Include="Assets\Packages\StarterAssets\Environment\Shaders\Built-in_RP\Triplanar.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Packages\StarterAssets\license.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Packages\StompyRobot\SROptions\link.xml" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Packages\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Packages\StarterAssets\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -285,14 +368,14 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Assets/Packages/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

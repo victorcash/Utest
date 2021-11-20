@@ -7,6 +7,7 @@ public class Services : MonoBehaviour
     [Header("SceneReferences")]
     public Transform elementsRoot;
     public Camera editCamera;
+    public Canvas editCanvas;
 
     [Header("ScripableObjectRefereces")]
     public GameConfig config;
@@ -41,6 +42,7 @@ public class Services : MonoBehaviour
         Config.Init(elementsRoot);
         Database = database;
         Ui = ui;
+        Ui.Init(editCanvas);
         GameStates = gameStates;
         Camera = new CameraService(editCamera);
         Playable = new PlayableService();
