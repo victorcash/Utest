@@ -8,6 +8,7 @@ public class GameConfig : ScriptableObject
     public int CsvWidth;
     [NonSerialized]
     public Transform elementsRoot;
+    public LayerMask ElementLayer;
 
     public void Init(Transform elementsRoot)
     {

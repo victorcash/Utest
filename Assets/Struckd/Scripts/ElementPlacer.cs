@@ -36,7 +36,24 @@ public class ElementPlacer : MonoBehaviour
             queueId = null;
             Services.Ui.ToggleElementList(true);
         }
-        if (currentElement != null)
+        if (currentElement == null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                var ray = editCamT.ScreenPointToRay(screenPos);
+                var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
+                foreach (var hit in hits)
+                {
+                    var elemet = hit.collider.gameObject.GetComponent<GamePlayElementBehaviour>();
+                    if (elemet != null)
+                    {
+                        currentElement = elemet;
+                        break;
+                    }
+                }
+            }
+        }
+        else
         {
             currentElement.transform.position = PointerPostion(Vector3.up, Vector3.zero);
         }
