@@ -48,8 +48,12 @@ public class GameElementEditor : MonoBehaviour
 
     private void OnElementSelected(GamePlayElementBehaviour elemet)
     {
+        if (currentElement == elemet) return;
+        var contentRt = Services.Ui.elementEditPanel.content;
+        contentRt.DestroyAllChildren();
         currentElement = elemet;
         Services.Ui.ToggleElementList(false);
         Services.Ui.ToggleElementEditPanel(true);
+        Services.Ui.CreateElementInterfaceEditUi(elemet, contentRt);
     }
 }

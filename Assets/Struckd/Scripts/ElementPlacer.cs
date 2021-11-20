@@ -32,12 +32,14 @@ public class ElementPlacer : MonoBehaviour
     {
         queueId = elementId;
     }
+    Vector3 offset = Vector3.zero;
     void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {
             currentElement = null;
             queueId = null;
+            offset = Vector3.zero;
             if (!Services.GameElementEditor.IsEditing)
             { 
                 Services.Ui.ToggleElementList(true);
@@ -55,6 +57,7 @@ public class ElementPlacer : MonoBehaviour
                     if (elemet != null)
                     {
                         currentElement = elemet;
+                        offset = PointerPostion(Vector3.up, Vector3.zero) - hit.collider.gameObject.transform.position;
                         break;
                     }
                 }
@@ -62,7 +65,7 @@ public class ElementPlacer : MonoBehaviour
         }
         else
         {
-            currentElement.transform.position = PointerPostion(Vector3.up, Vector3.zero);
+            currentElement.transform.position = PointerPostion(Vector3.up, Vector3.zero) - offset;
         }
         if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {

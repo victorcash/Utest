@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2392051319786800365}
   - component: {fileID: 747995118883567609}
   - component: {fileID: 5329637319692000216}
+  - component: {fileID: 727013484270795570}
   m_Layer: 5
   m_Name: IPlayableEditUi
   m_TagString: Untagged
@@ -87,3 +88,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec3f04cc869ce743bf6664750b44f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &727013484270795570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753006643756828827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: 50
+  m_PreferredWidth: -1
+  m_PreferredHeight: 50
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1

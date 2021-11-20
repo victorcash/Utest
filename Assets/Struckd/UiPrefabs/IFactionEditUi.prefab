@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 807642253761153263}
   - component: {fileID: 2059524618818756445}
   - component: {fileID: 4601325620107839137}
+  - component: {fileID: 8698387786204194604}
   m_Layer: 5
   m_Name: IFactionEditUi
   m_TagString: Untagged
@@ -87,3 +88,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5a09f8deab00b4f9b70dc9306f8533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8698387786204194604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480424513978758139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: 50
+  m_PreferredWidth: -1
+  m_PreferredHeight: 50
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1

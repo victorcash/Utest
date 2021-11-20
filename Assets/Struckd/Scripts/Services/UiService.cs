@@ -42,13 +42,15 @@ public class UiService : ScriptableObject
         elementEditPanel?.ToggleVisibility(val);
     }
 
-    public List<ElementInterfaceUi> GetElementInterfaceUiPrefabs(GamePlayElementBehaviour element)
+    private List<ElementInterfaceUi> GetElementInterfaceUiPrefabs(GamePlayElementBehaviour element)
     {
         List<ElementInterfaceUi> result = new List<ElementInterfaceUi>();
+
         var interfaces = element.GetType().GetInterfaces();
         foreach (var thisInterface in interfaces)
         {
             var interfaceName = thisInterface.ToString();
+            Debug.Log(interfaceName);
             var hasUi = Services.Ui.interfaceEditUiLookup.TryGetValue(interfaceName, out var thisUiPrefab);
             if (hasUi)
             { 
@@ -57,8 +59,6 @@ public class UiService : ScriptableObject
         }
         return result;
     }
-
-
 
     public void CreateElementInterfaceEditUi(GamePlayElementBehaviour element, RectTransform rt)
     {
