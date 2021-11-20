@@ -117,16 +117,6 @@
     <Compile Include="Assets\Plugins\ExtensionMethod\UI\InvertedMaskImage.cs" />
     <Compile Include="Assets\Plugins\ExtensionMethod\UI\ScrollRectExt.cs" />
     <Compile Include="Assets\Plugins\ExtensionMethod\UnityEditor\ScriptableObjectViewer.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Plugins\StompyRobot\SROptions\SROptions.Attributes.cs" />
     <Compile Include="Assets\Plugins\StompyRobot\SROptions\SROptions.Test.cs" />
     <Compile Include="Assets\Plugins\StompyRobot\SROptions\SROptions.cs" />
@@ -144,12 +134,10 @@
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Plugins\JsonDotNet\link.xml" />
-    <None Include="Assets\Plugins\StarterAssets\Environment\Shaders\Built-in_RP\Triplanar.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Plugins\StarterAssets\license.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
@@ -160,7 +148,6 @@
     <None Include="Assets\Plugins\StompyRobot\SROptions\link.xml" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
-    <None Include="Assets\Plugins\StarterAssets\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

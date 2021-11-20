@@ -72,14 +72,7 @@
     <Compile Include="Assets\Plugins\ExtensionMethod\Editor\ExtendedScriptableObjectDrawer.cs" />
     <Compile Include="Assets\Plugins\ExtensionMethod\SerializableDictionary\Editor\SerializableDictionaryPropertyDrawer.cs" />
     <Compile Include="Assets\Plugins\ExtensionMethod\UnityEditor\Editor\ScenePhysicsTool.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Editor\PackageChecker\PackageChecker.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Editor\ScriptingDefineUtils.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Editor\StarterAssetsDeployMenu.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\Editor\ThirdPersonStarterAssetsDeployMenu.cs" />
-    <Compile Include="Assets\Plugins\StarterAssets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Plugins\graphQl-client\Scripts\Editor\GraphApiEditor.cs" />
-    <None Include="Assets\Plugins\StarterAssets\Editor\PackageChecker\PackageImportList.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

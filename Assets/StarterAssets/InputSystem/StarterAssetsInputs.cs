@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -22,32 +23,32 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 #endif
 
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
+		private void Start()
 		{
-			MoveInput(value.Get<Vector2>());
+			Services.PlayerInput.onActionTriggered += HandleAction;
 		}
 
-		public void OnLook(InputValue value)
+		private void HandleAction(InputAction.CallbackContext context)
 		{
-			if(cursorInputForLook)
+            if (context.action.name == "Jump")
+            {
+				JumpInput(true);
+			}
+			if (context.action.name == "OnSprint")
 			{
-				LookInput(value.Get<Vector2>());
+				SprintInput(true);
+			}
+			if (context.action.name == "Move")
+			{
+				var val = context.action.ReadValue<Vector2>();
+				MoveInput(val);
+			}
+			if (context.action.name == "Look")
+			{
+				var val = context.action.ReadValue<Vector2>();
+				LookInput(val);
 			}
 		}
-
-		public void OnJump(InputValue value)
-		{
-			JumpInput(value.isPressed);
-		}
-
-		public void OnSprint(InputValue value)
-		{
-			SprintInput(value.isPressed);
-		}
-#else
-	// old input sys if we do decide to have it (most likely wont)...
-#endif
 
 
 		public void MoveInput(Vector2 newMoveDirection)

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IKillableConfigUi : ElementInterfaceUi
+public class IKillableEditUi : ElementInterfaceUi
 {
     public Slider hpSlider;
     public Slider hpMaxSlider;

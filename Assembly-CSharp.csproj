@@ -64,8 +64,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
+    <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
+    <Compile Include="Assets\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Struckd\Scripts\CsvHelper.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\MapData.cs" />
+    <Compile Include="Assets\Struckd\Scripts\ElementPlacer.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\Faction.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\GameMode.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
@@ -84,14 +95,18 @@
     <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GamePlayElementDatabase.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\CameraService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\GamePlayElementService.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Services\GameStates.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\PlayableService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\Services.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\UiService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\AppCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\EditCanvas.cs" />
-    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IKillableConfigUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IKillableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />
     <Compile Include="Assets\TestObject.cs" />
+    <None Include="Assets\StarterAssets\Environment\Shaders\Built-in_RP\Triplanar.shader" />
+    <None Include="Assets\StarterAssets\license.txt" />
+    <None Include="Assets\StarterAssets\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

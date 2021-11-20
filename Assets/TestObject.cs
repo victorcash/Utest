@@ -34,6 +34,12 @@ public class TestObject : MonoBehaviour
             UnityEngine.Debug.Log(xx);
         }
     }
+
+    [ContextMenu(nameof(DragElement))]
+    public void DragElement()
+    {
+        Services.ElementPlacer.PlaceElement(2);
+    }
 }
 
 

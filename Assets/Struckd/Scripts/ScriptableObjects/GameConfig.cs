@@ -8,4 +8,9 @@ public class GameConfig : ScriptableObject
     public int CsvWidth;
     [NonSerialized]
     public Transform elementsRoot;
+
+    public void Init(Transform elementsRoot)
+    {
+        this.elementsRoot = elementsRoot;
+    }
 }

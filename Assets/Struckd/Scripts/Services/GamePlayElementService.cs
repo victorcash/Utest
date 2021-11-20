@@ -12,14 +12,20 @@ public class GamePlayElementService
     private Action onPlay;
     private Action onEdit;
 
+    public GamePlayElementBehaviour CreateGamePlayElement(int elementId)
+    {
+        var element = Services.Database.GetElement(elementId);
+        var elementsRoot = Services.Config.elementsRoot;
+        var prefab = element.prefab;
+        var elementBehaviour = UnityEngine.Object.Instantiate(prefab, elementsRoot);
+        return elementBehaviour;
+    }
+
     public GamePlayElementBehaviour CreateGamePlayElement(string entryString)
     {
         var entry = entryString.Split(',');
         var elementID = int.Parse(entry[(int)CsvColumn.ElementId]);
-        var element = Services.Database.GetElement(elementID);
-        var elementsRoot = Services.Config.elementsRoot;
-        var prefab = element.prefab;
-        var elementBehaviour = UnityEngine.Object.Instantiate(prefab, elementsRoot);
+        var elementBehaviour = CreateGamePlayElement(elementID);
         elementBehaviour.InjectData(entry);
         return elementBehaviour;
     }
