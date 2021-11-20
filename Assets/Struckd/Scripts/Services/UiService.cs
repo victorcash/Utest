@@ -50,7 +50,6 @@ public class UiService : ScriptableObject
         foreach (var thisInterface in interfaces)
         {
             var interfaceName = thisInterface.ToString();
-            Debug.Log(interfaceName);
             var hasUi = Services.Ui.interfaceEditUiLookup.TryGetValue(interfaceName, out var thisUiPrefab);
             if (hasUi)
             { 

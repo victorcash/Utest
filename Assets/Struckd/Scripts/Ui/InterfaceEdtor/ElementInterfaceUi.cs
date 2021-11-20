@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementInterfaceUi : MonoBehaviour
+public abstract class ElementInterfaceUi : MonoBehaviour
 {
-    private object target;
+    protected object target;
     public void SetTarget(object target)
     {
         this.target = target;
