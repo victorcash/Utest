@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,20 @@ public class ElementPlacer : MonoBehaviour
     private GameMode gameMode => Services.GameStates.gameMode;
     private Camera editCamT => Services.Camera?.editCamera;
     private Vector2 screenPos => Mouse.current.position.ReadValue();
+    private PlayerInput input => Services.PlayerInput;
+    private void Awake()
+    {
+        input.onActionTriggered += InputTriggered;
+    }
+
+    private void InputTriggered(InputAction.CallbackContext context)
+    {
+        if (context.action.name == "LeftRelease")
+        {
+            currentElement = null;
+        }
+    }
+
     private Vector3 PointerPostion(Vector3 planeNormal, Vector3 planePoint)
     {
         if (editCamT == null) return Vector3.zero;
@@ -33,10 +48,7 @@ public class ElementPlacer : MonoBehaviour
 
     }
 
-    private void OnMouseUp()
-    {
-        currentElement = null;
-    }
+
 
     public void OnJump(InputValue value)
     {

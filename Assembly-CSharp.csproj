@@ -104,6 +104,7 @@
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IKillableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />
     <Compile Include="Assets\TestObject.cs" />
+    <Compile Include="Assets\TestUiObject.cs" />
     <None Include="Assets\StarterAssets\Environment\Shaders\Built-in_RP\Triplanar.shader" />
     <None Include="Assets\StarterAssets\license.txt" />
     <None Include="Assets\StarterAssets\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />

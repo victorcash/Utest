@@ -25,10 +25,10 @@ namespace StarterAssets
 
 		private void Start()
 		{
-			Services.PlayerInput.onActionTriggered += HandleAction;
+			Services.PlayerInput.onActionTriggered += InputTriggered;
 		}
 
-		private void HandleAction(InputAction.CallbackContext context)
+		private void InputTriggered(InputAction.CallbackContext context)
 		{
             if (context.action.name == "Jump")
             {

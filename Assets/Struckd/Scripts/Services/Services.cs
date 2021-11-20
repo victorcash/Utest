@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using StarterAssets;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Services : MonoBehaviour
@@ -30,6 +31,8 @@ public class Services : MonoBehaviour
     
     public PlayerInput playerInput;
     public static PlayerInput PlayerInput;
+    public UICanvasControllerInput joyStick;
+    public static UICanvasControllerInput JoyStick;
 
     private void Awake() => Init();
     private void Init()
@@ -44,5 +47,7 @@ public class Services : MonoBehaviour
         GamePlayElement = new GamePlayElementService();
         ElementPlacer = elementPlacer;
         PlayerInput = playerInput;
+        playerInput.neverAutoSwitchControlSchemes = true;
+        JoyStick = joyStick;
     }
 }

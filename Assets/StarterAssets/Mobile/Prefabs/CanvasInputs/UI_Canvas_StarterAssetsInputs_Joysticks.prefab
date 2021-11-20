@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6483554099135143963}
   - component: {fileID: 1557486221260924829}
   - component: {fileID: 1663187150}
-  - component: {fileID: 8890774966862588244}
   m_Layer: 5
   m_Name: UI_Canvas_StarterAssetsInputs_Joysticks
   m_TagString: Untagged
@@ -87,7 +86,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!114 &1557486221260924829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,19 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a300d010f57451488aa99000126fbd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftJoystick: {fileID: 5959203425371069255}
+  rightJoystick: {fileID: 7113428977333465798}
+  buttonA: {fileID: 8690618095498820080}
+  buttonB: {fileID: 166868854162214642}
   starterAssetsInputs: {fileID: 0}
---- !u!114 &8890774966862588244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6751388636123340836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901182334643ba1438a25accc6bd0c79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &166868853765351469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,6 +264,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 166868853765351469}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &166868854162214642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063,
+    type: 3}
+  m_PrefabInstance: {fileID: 166868853765351469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448cd6d8e2f2cb04096e777d99974bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5959203425529373846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,6 +283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 597308369130767402}
     m_Modifications:
+    - target: {fileID: 191938513, guid: 6eb08bfc0fd869c47b796c42ada099da, type: 3}
+      propertyPath: uICanvasControllerInput
+      value: 
+      objectReference: {fileID: 1663187150}
     - target: {fileID: 191938513, guid: 6eb08bfc0fd869c47b796c42ada099da, type: 3}
       propertyPath: joystickOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -403,6 +409,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5959203425529373846}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5959203425371069255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 191938513, guid: 6eb08bfc0fd869c47b796c42ada099da,
+    type: 3}
+  m_PrefabInstance: {fileID: 5959203425529373846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cb8c4d669392748bb924209de33b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7113428977512795415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,6 +604,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7113428977512795415}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7113428977333465798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 191938513, guid: 6eb08bfc0fd869c47b796c42ada099da,
+    type: 3}
+  m_PrefabInstance: {fileID: 7113428977512795415}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cb8c4d669392748bb924209de33b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8690618095626166063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -726,3 +756,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8690618095626166063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8690618095498820080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063,
+    type: 3}
+  m_PrefabInstance: {fileID: 8690618095626166063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448cd6d8e2f2cb04096e777d99974bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
