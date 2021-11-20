@@ -197,7 +197,7 @@ namespace RTS_Cam
             else
                 Move();
 
-            HeightCalculation();
+            //HeightCalculation();
             Rotation();
             LimitPosition();
         }
@@ -239,7 +239,7 @@ namespace RTS_Cam
                 m_Transform.Translate(desiredMove, Space.Self);
             }       
         
-            if(usePanning && Input.GetKey(panningKey) && MouseAxis != Vector2.zero)
+            if(usePanning && !ExtensionUI.IsPointerOverUIObject() && Input.GetKey(panningKey) && MouseAxis != Vector2.zero)
             {
                 Vector3 desiredMove = new Vector3(-MouseAxis.x, 0, -MouseAxis.y);
 

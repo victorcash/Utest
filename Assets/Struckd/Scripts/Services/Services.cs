@@ -32,8 +32,13 @@ public class Services : MonoBehaviour
     
     public PlayerInput playerInput;
     public static PlayerInput PlayerInput;
+
     public UICanvasControllerInput joyStick;
     public static UICanvasControllerInput JoyStick;
+
+    public GameElementEditor gameElementEditor;
+    public static GameElementEditor GameElementEditor;
+
 
     private void Awake() => Init();
     private void Init()
@@ -51,5 +56,6 @@ public class Services : MonoBehaviour
         PlayerInput = playerInput;
         playerInput.neverAutoSwitchControlSchemes = true;
         JoyStick = joyStick;
+        GameElementEditor = gameElementEditor;
     }
 }

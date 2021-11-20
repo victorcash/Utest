@@ -21,15 +21,15 @@ MonoBehaviour:
     - IKillable
     - IPlayable
     m_values:
+    - {fileID: 9003631614357683053, guid: cfdfa21e55ba4f940943039defaa5b60, type: 3}
+    - {fileID: 0}
+    - {fileID: 4601325620107839137, guid: 185b7c6c83173b34e92d782667c40beb, type: 3}
+    - {fileID: 2525065649315246744, guid: 3ec86bb834d3edd46a3fb93dadfe3eb6, type: 3}
     - {fileID: 223330441557996607, guid: 9086009dcc35eab4a86cb09bdc30eaa7, type: 3}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 5329637319692000216, guid: 463039857c91ba240b1329af727040eb, type: 3}
   elementCardPrefab: {fileID: 5387152541482353892, guid: 4c90c62204b8a594b9099fee16366ba5,
     type: 3}
   elementListUiPrefab: {fileID: 566752402408048791, guid: 3d8a5eaf64476b64b8c72964468b8d0f,
     type: 3}
-  elementListUi: {fileID: 0}
-  editCanvas: {fileID: 0}
+  elementEditPanelPrefab: {fileID: 4932867302177419286, guid: 381d583085f6d2f46aa6d2ca07bf1714,
+    type: 3}

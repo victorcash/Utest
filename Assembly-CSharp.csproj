@@ -65,6 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\EditCamera.cs" />
+    <Compile Include="Assets\ElementEditPanel.cs" />
+    <Compile Include="Assets\GameElementEditor.cs" />
     <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
     <Compile Include="Assets\Packages\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -162,7 +164,13 @@
     <Compile Include="Assets\Struckd\Scripts\Ui\EditCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\ElementCardUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\ElementListUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\ElementInterfaceUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IConsumableEditUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IConsumerEditUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IFactionEditUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IFactoryEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IKillableEditUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IPlayableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\MapFileAccessUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />
     <Compile Include="Assets\TestObject.cs" />

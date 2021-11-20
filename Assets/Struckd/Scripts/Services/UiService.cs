@@ -9,14 +9,17 @@ public class UiService : ScriptableObject
     public InterfaceUiDictionary interfaceEditUiLookup = new InterfaceUiDictionary();
     public ElementCardUi elementCardPrefab;
     public ElementListUi elementListUiPrefab;
+    public ElementEditPanel elementEditPanelPrefab;
     [NonSerialized] public ElementListUi elementListUi;
     [NonSerialized] public Canvas editCanvas;
+    [NonSerialized] public ElementEditPanel elementEditPanel;
 
 
     public void Init(Canvas editCanvas)
     {
         this.editCanvas = editCanvas;
         elementListUi = Instantiate(elementListUiPrefab, editCanvas.transform);
+        elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
     }
 
     public void ToggleUIMode(GameMode gameMode)
@@ -34,9 +37,12 @@ public class UiService : ScriptableObject
     {
         elementListUi?.ToggleVisibility(val);
     }
+    public void ToggleElementEditPanel(bool val)
+    {
+        elementEditPanel?.ToggleVisibility(val);
+    }
 
-
-    public List<ElementInterfaceUi> GetElementEditUiPrefabs(GamePlayElementBehaviour element)
+    public List<ElementInterfaceUi> GetElementInterfaceUiPrefabs(GamePlayElementBehaviour element)
     {
         List<ElementInterfaceUi> result = new List<ElementInterfaceUi>();
         var interfaces = element.GetType().GetInterfaces();
@@ -52,9 +58,11 @@ public class UiService : ScriptableObject
         return result;
     }
 
-    public void CreateElementEditUi(GamePlayElementBehaviour element, RectTransform rt)
+
+
+    public void CreateElementInterfaceEditUi(GamePlayElementBehaviour element, RectTransform rt)
     {
-        var uiList = GetElementEditUiPrefabs(element);
+        var uiList = GetElementInterfaceUiPrefabs(element);
         foreach (var ui in uiList)
         {
             var interfaceUi = Instantiate(ui, rt);

@@ -10,14 +10,14 @@ public class EditCamera : MonoBehaviour
 #else
     private Vector2 screenPos => Touchscreen.current.primaryTouch.position.ReadValue();
 #endif
-    public Camera camera => GetComponent<Camera>();
+    public Camera cameraComp => GetComponent<Camera>();
     private Vector3 PointerPostion()
     {
-        if (camera == null) return Vector3.zero;
+        if (cameraComp == null) return Vector3.zero;
         Math_3D.LinePlaneIntersection(
             out var pos,
-            camera.transform.position,
-            camera.ScreenPointToRay(screenPos).direction,
+            cameraComp.transform.position,
+            cameraComp.ScreenPointToRay(screenPos).direction,
             Vector3.up,
             Vector3.zero);
         return pos;

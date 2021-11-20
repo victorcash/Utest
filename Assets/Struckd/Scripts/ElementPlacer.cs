@@ -5,7 +5,7 @@ public class ElementPlacer : MonoBehaviour
 {
     private GamePlayElementBehaviour currentElement;
     private GameMode gameMode => Services.GameStates.gameMode;
-    private Camera editCamT => Services.Camera.editCamera.camera;
+    private Camera editCamT => Services.Camera.editCamera.cameraComp;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
 #else
@@ -38,7 +38,10 @@ public class ElementPlacer : MonoBehaviour
         {
             currentElement = null;
             queueId = null;
-            Services.Ui.ToggleElementList(true);
+            if (!Services.GameElementEditor.IsEditing)
+            { 
+                Services.Ui.ToggleElementList(true);
+            }
         }
         if (currentElement == null)
         {
