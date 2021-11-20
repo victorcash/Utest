@@ -2,7 +2,7 @@
 using System.Text;
 using UnityEngine;
 
-public abstract class GamePlayElementBehaviour : MonoBehaviour
+public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
 {
     public int elementID;
     private bool isInit;
@@ -29,10 +29,7 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour
     {
         Services.GamePlayElement.CleanUpElement(this, OnPlay, OnEdit);
     }
-    public virtual void Remove()
-    {
-        Destroy(gameObject);
-    }
+
     public virtual void Deserialize(string[] entry)
     {
         transform.position = new Vector3(
@@ -65,5 +62,36 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour
         entry.SetValue(transform.localScale.y, CsvColumn.ScalY);
         entry.SetValue(transform.localScale.z, CsvColumn.ScalZ);
         return entry;
+    }
+    public virtual void Remove()
+    {
+        Destroy(gameObject);
+    }
+    public Vector3 GetPos() => transform.position;
+    public Quaternion GetRotation() => transform.rotation;
+    public float GetScale() => transform.localScale.x;
+    public float GetHeight() => transform.position.y;
+    public void SetPos(Vector3 val)
+    {
+        transform.position = val;
+    }
+    public void SetRotationX(float val)
+    {
+        var euler = transform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(val, euler.y, euler.z);
+    }
+    public void SetRotationY(float val)
+    {
+        var euler = transform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(euler.x, val, euler.z);
+    }
+    public void SetScale(float val)
+    {
+        transform.localScale = val * Vector3.one;
+    }
+    public void SetHeight(float val)
+    {
+        var pos = transform.position;
+        transform.position = new Vector3(pos.x, val, pos.z);
     }
 }

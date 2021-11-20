@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-
 
 public class GameElementEditor : MonoBehaviour
 {
@@ -37,6 +33,7 @@ public class GameElementEditor : MonoBehaviour
                 OnElementDeselected();
             }
         }
+        if (currentElement == null) Services.Ui.elementEditPanel.ToggleVisibility(false);
     }
 
     private void OnElementDeselected()

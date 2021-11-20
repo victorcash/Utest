@@ -142,13 +142,15 @@
     <Compile Include="Assets\Struckd\Scripts\Enums\GameMode.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementBehaviour.cs" />
-    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\KillableGamePlayElementBehaviour.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\KillableBehaviour.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\PlayableBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\TankBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumer.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IFaction.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IFactory.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IKillable.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlacable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlayable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IPlayableController.cs" />
     <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GameConfig.cs" />
@@ -170,6 +172,7 @@
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IFactionEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IFactoryEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IKillableEditUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IPlacableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IPlayableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\MapFileAccessUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />

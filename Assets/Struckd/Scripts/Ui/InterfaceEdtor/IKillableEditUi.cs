@@ -16,21 +16,21 @@ public class IKillableEditUi : ElementInterfaceUi
         hpSlider.onValueChanged.AddListener(SetHp);
         hpMaxSlider.onValueChanged.AddListener(SetHpMax);
 
-        hpSlider.SetValueWithoutNotify(killable.GetHp() / Services.Config.HpRange);
-        hpMaxSlider.SetValueWithoutNotify(killable.GetHpMax() / Services.Config.HpRange);
+        hpSlider.SetValueWithoutNotify(killable.GetHp());
+        hpMaxSlider.SetValueWithoutNotify(killable.GetHpMax());
         hpText.text = Mathf.CeilToInt(killable.GetHp()).ToString();
         hpMaxText.text = Mathf.CeilToInt(killable.GetHpMax()).ToString();
     }
 
     private void SetHpMax(float val)
     {
-        var hpMax = val * Services.Config.HpRange;
+        var hpMax = val;
         hpMaxText.text = Mathf.CeilToInt(hpMax).ToString();
         killable.SetHpMax(hpMax);
     }
     private void SetHp(float val)
     {
-        var hp = val * Services.Config.HpRange;
+        var hp = val;
         hpText.text = Mathf.CeilToInt(hp).ToString();
         killable.SetHp(hp);
     }

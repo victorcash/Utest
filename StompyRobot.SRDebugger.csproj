@@ -723,11 +723,11 @@
     <Reference Include="Unity.InputSystem">
       <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Users/Victor/UnityProjects/Utest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

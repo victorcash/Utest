@@ -47,7 +47,7 @@ public class ElementPlacer : MonoBehaviour
         }
         if (currentElement == null)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && ExtensionUI.PointerOverUIObjectsCount() == 0)
             {
                 var ray = editCamT.ScreenPointToRay(screenPos);
                 var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
@@ -65,7 +65,7 @@ public class ElementPlacer : MonoBehaviour
         }
         else
         {
-            currentElement.transform.position = PointerPostion(Vector3.up, Vector3.zero) - offset;
+            currentElement.SetPos(PointerPostion(Vector3.up, Vector3.zero) - offset);
         }
         if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {

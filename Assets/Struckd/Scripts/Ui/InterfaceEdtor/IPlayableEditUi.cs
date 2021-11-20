@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine.UI;
 
 public class IPlayableEditUi : ElementInterfaceUi
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Button button;
+    public IPlayable iPlayable => (IPlayable)target;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        button.onClick.AddListener(SetAsPlayable);
+    }
+    private void SetAsPlayable()
+    {
+        iPlayable.SetAsPlayable();
     }
 }

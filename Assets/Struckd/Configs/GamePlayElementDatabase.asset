@@ -15,3 +15,4 @@ MonoBehaviour:
   allGamePlayElements:
   - {fileID: 11400000, guid: 14e1f0b7c0ccce64a8e6eea80bbd9fc6, type: 2}
   - {fileID: 11400000, guid: 5c7ee15944f9c504d90c4148e601d7bf, type: 2}
+  - {fileID: 11400000, guid: 0c025690c5436e247a527e90400680c4, type: 2}
