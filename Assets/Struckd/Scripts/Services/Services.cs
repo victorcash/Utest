@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 public class Services : MonoBehaviour
 {
     [Header("SceneReferences")]
-    public Transform elementsRoot;
-    public Camera editCamera;
-    public Canvas editCanvas;
+    [SerializeField] private Transform elementsRoot;
+    [SerializeField] private EditCamera editCamera;
+    [SerializeField] private Canvas editCanvas;
 
     [Header("ScripableObjectRefereces")]
     public GameConfig config;

@@ -5,7 +5,7 @@ public class ElementPlacer : MonoBehaviour
 {
     private GamePlayElementBehaviour currentElement;
     private GameMode gameMode => Services.GameStates.gameMode;
-    private Camera editCamT => Services.Camera?.editCamera;
+    private Camera editCamT => Services.Camera.editCamera.camera;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
 #else
@@ -13,6 +13,10 @@ public class ElementPlacer : MonoBehaviour
 #endif
     private int? queueId;
 
+    public bool IsPlacing()
+    {
+        return queueId != null || currentElement != null;
+    }
     private Vector3 PointerPostion(Vector3 planeNormal, Vector3 planePoint)
     {
         if (editCamT == null) return Vector3.zero;

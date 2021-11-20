@@ -2,10 +2,10 @@
 
 public class CameraService
 {
-    public Camera editCamera;
+    public EditCamera editCamera;
 
 
-    public CameraService(Camera editCamera)
+    public CameraService(EditCamera editCamera)
     {
         this.editCamera = editCamera;
     }
