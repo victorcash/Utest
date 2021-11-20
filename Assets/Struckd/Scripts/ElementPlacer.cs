@@ -11,22 +11,7 @@ public class ElementPlacer : MonoBehaviour
 #else
     private Vector2 screenPos => Touchscreen.current.primaryTouch.position.ReadValue();
 #endif
-    private PlayerInput input => Services.PlayerInput;
     private int? queueId;
-    private void Awake()
-    {
-        input.onActionTriggered += InputTriggered;
-    }
-
-    private void InputTriggered(InputAction.CallbackContext context)
-    {
-        if (context.action.name == "LeftRelease")
-        {
-            currentElement = null;
-            queueId = null;
-            Services.Ui.ToggleElementList(true);
-        }
-    }
 
     private Vector3 PointerPostion(Vector3 planeNormal, Vector3 planePoint)
     {
@@ -45,6 +30,12 @@ public class ElementPlacer : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            currentElement = null;
+            queueId = null;
+            Services.Ui.ToggleElementList(true);
+        }
         if (currentElement != null)
         {
             currentElement.transform.position = PointerPostion(Vector3.up, Vector3.zero);
@@ -53,7 +44,7 @@ public class ElementPlacer : MonoBehaviour
         {
             currentElement = Services.GamePlayElement.CreateGamePlayElement((int)queueId);
             queueId = null;
-            //Services.Ui.ToggleElementList(false);
+            Services.Ui.ToggleElementList(false);
         }
     }
 }
