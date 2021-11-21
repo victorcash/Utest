@@ -8,6 +8,7 @@ public class GamePlayElementService
 {
     public List<IKillable> IKillables = new List<IKillable>();
     public List<IPlayable> IPlayables = new List<IPlayable>();
+    public List<IPlacable> IPlacables = new List<IPlacable>();
     private List<GamePlayElementBehaviour> gamePlayElements = new List<GamePlayElementBehaviour>();
     private Action onPlay;
     private Action onEdit;
@@ -37,6 +38,7 @@ public class GamePlayElementService
         this.onEdit += onEdit;
         if (element is IKillable) IKillables.Add((IKillable)element);
         if (element is IPlayable) IPlayables.Add((IPlayable)element);
+        if (element is IPlacable) IPlacables.Add((IPlacable)element);
     }
 
     public void CleanUpElement(GamePlayElementBehaviour element, Action onPlay, Action onEdit)
@@ -46,6 +48,7 @@ public class GamePlayElementService
         this.onEdit -= onEdit;
         if (element is IKillable) IKillables.Remove((IKillable)element);
         if (element is IPlayable) IPlayables.Remove((IPlayable)element);
+        if (element is IPlacable) IPlacables.Remove((IPlacable)element);
     }
 
     public void ClearAllActiveIPlayable()
@@ -58,10 +61,19 @@ public class GamePlayElementService
 
     public void RemoveAllElements()
     {
-        foreach (var element in gamePlayElements)
+        foreach (var iPlacable in IPlacables)
         {
-            element.Remove();
+            iPlacable.Remove();
         }
+    }
+
+    public IPlayable GetActivePlayable()
+    {
+        foreach (var playable in IPlayables)
+        {
+            if (playable.IsActivePlayable()) return playable;
+        }
+        return null;
     }
 
     public void SaveMapData()

@@ -35,18 +35,3 @@ public class TestObject : MonoBehaviour
     }
 }
 
-
-interface root
-{ 
-
-}
-
-
-interface sub : root
-{ 
-
-}
-
-//DO HP
-//DO HP UI
-//DO SOME COMBAT
