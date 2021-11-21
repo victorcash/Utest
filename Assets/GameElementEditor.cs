@@ -46,7 +46,7 @@ public class GameElementEditor : MonoBehaviour
                 }
             }
 
-            if ((Time.realtimeSinceStartup - mouseDownTimeStamp) < 0.2f && !hasElement)
+            if ((Time.realtimeSinceStartup - mouseDownTimeStamp) < Services.Config.TapSpeed && !hasElement)
             {
                 if (!hasElement)
                 {

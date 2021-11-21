@@ -10,4 +10,6 @@ public class GameConfig : ScriptableObject
     public int CsvWidth;
     public LayerMask ElementLayer;
     public List<string> cities;
+    public float SecondsInDay = 86400f;
+    public float TapSpeed = 0.15f;
 }
