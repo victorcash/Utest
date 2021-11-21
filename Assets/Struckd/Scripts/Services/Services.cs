@@ -32,6 +32,8 @@ public class Services : MonoBehaviour
     public static CameraService Camera;
     public static ElementService GameElement;
 
+    public VFXController vFXController;
+
     private void Awake() => Init();
     private void Init()
     {
@@ -49,6 +51,7 @@ public class Services : MonoBehaviour
         GraphApi = graphApi;
         Ui = ui;
         Ui.Init();
+        vFXController.Init();
         Camera = GetComponent<CameraService>();
         Camera.Init(GetComponentInChildren<CinemachineVirtualCamera>());
         GameElement = new ElementService();

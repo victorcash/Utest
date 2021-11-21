@@ -9,11 +9,14 @@ public class EnvironmentControlUi : MonoBehaviour
     public Slider rainSlider;
     public Slider fogSlider;
     public Slider thunderSlider;
-    public Slider dustSlider;
     public Slider snowSlider;
     public RectTransform cityContent;
     public TMP_Text jsonDisplay;
     public TMP_Text timeText;
+    public TMP_Text snowText;
+    public TMP_Text rainText;
+    public TMP_Text fogText;
+    public TMP_Text thunderText;
     public Button closeBtn;
 
     private EnvironmentController controller;
@@ -24,15 +27,34 @@ public class EnvironmentControlUi : MonoBehaviour
     public void Init()
     {
         controller = Services.EnvironmentController;
-        rainSlider.onValueChanged.AddListener(controller.SetRainIntensity);
-        fogSlider.onValueChanged.AddListener(controller.SetFogIntensity);
-        thunderSlider.onValueChanged.AddListener(controller.SetThunderIntensity);
-        dustSlider.onValueChanged.AddListener(controller.SetDustIntensity);
-        snowSlider.onValueChanged.AddListener(controller.SetSnowIntensity);
+        rainSlider.onValueChanged.AddListener(OnSetRainIntensity);
+        fogSlider.onValueChanged.AddListener(OnSetFogIntensity);
+        thunderSlider.onValueChanged.AddListener(OnSetThunderIntensity);
+        snowSlider.onValueChanged.AddListener(OnSetSnowIntensity);
         timeSlider.onValueChanged.AddListener(OnTimeSlider);
         closeBtn.onClick.AddListener(()=> { Services.Ui.ToggleWeatherPanel(false); });
         ToggleVisibility(false);
         CreateCityCards();
+    }
+    private void OnSetRainIntensity(float val)
+    {
+        controller.SetRainIntensity(val);
+        rainText.text = val.ToString();
+    }
+    private void OnSetFogIntensity(float val)
+    {
+        controller.SetFogIntensity(val);
+        fogText.text = val.ToString();
+    }
+    private void OnSetThunderIntensity(float val)
+    {
+        controller.SetThunderIntensity(val);
+        thunderText.text = val.ToString();
+    }
+    private void OnSetSnowIntensity(float val)
+    {
+        controller.SetSnowIntensity(val);
+        snowText.text = val.ToString();
     }
 
     private void OnTimeSlider(float val)
@@ -64,10 +86,15 @@ public class EnvironmentControlUi : MonoBehaviour
 
     private void UpdateUI()
     {
+        timeSlider.SetValueWithoutNotify(controller.time);
+
         rainSlider.SetValueWithoutNotify(controller.rain);
         fogSlider.SetValueWithoutNotify(controller.fog);
         thunderSlider.SetValueWithoutNotify(controller.thunder);
-        dustSlider.SetValueWithoutNotify(controller.dust);
-        timeSlider.SetValueWithoutNotify(controller.time);
+        snowSlider.SetValueWithoutNotify(controller.snow);
+        rainText.text = controller.rain.ToString();
+        snowText.text = controller.snow.ToString();
+        thunderText.text = controller.thunder.ToString();
+        fogText.text = controller.fog.ToString();
     }
 }

@@ -20,7 +20,7 @@ public class DAX_PrefGen_V1_1 : MonoBehaviour
 
 	void FixedUpdate () 
 	{
-		this.OutText.text = string.Format( "{0}/{1}", this.curIndex+1, this.Items.Length );
+		//this.OutText.text = string.Format( "{0}/{1}", this.curIndex+1, this.Items.Length );
 	}
 
 	void Update()
@@ -28,6 +28,7 @@ public class DAX_PrefGen_V1_1 : MonoBehaviour
 
 	}
 
+	[ContextMenu(nameof(Next))]
 	public void Next()
 	{
 		this.curIndex += 1;
@@ -39,7 +40,7 @@ public class DAX_PrefGen_V1_1 : MonoBehaviour
 		//Application.LoadLevel( );
 		
 	}
-
+	[ContextMenu(nameof(Prev))]
 	public void Prev()
 	{
 		this.curIndex -= 1;
