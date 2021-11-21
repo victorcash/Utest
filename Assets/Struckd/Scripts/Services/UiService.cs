@@ -13,9 +13,13 @@ public class UiService : ScriptableObject
     public EnvironmentControlUi environmentControlUiPrefab;
     public CityCardUi cityCardPrefab;
     public Canvas editCanvas => Services.SceneReferences.editCanvas;
+    private Canvas appCanvas => Services.SceneReferences.appCanvas;
+    private Canvas playCanvas => Services.SceneReferences.playCanvas;
+
     [NonSerialized] public ElementListUi elementListUi;
     [NonSerialized] public ElementEditPanel elementEditPanel;
     [NonSerialized] public EnvironmentControlUi environmentControlUi;
+
     
     public void Init(Action<GameMode> onGameModeChanged)
     {
@@ -24,6 +28,7 @@ public class UiService : ScriptableObject
         elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
         environmentControlUi = Instantiate(environmentControlUiPrefab, editCanvas.transform);
         environmentControlUi.Init();
+        ToggleUIMode(GameMode.Edit);
     }
 
     private void OnGameModeChanged(GameMode gameMode)
@@ -33,7 +38,17 @@ public class UiService : ScriptableObject
 
     public void ToggleUIMode(GameMode gameMode)
     {
+        if (gameMode == GameMode.Edit)
+        {
+            editCanvas.gameObject.SetActive(true);
+            playCanvas.gameObject.SetActive(false);
+        }
 
+        if (gameMode == GameMode.Play)
+        {
+            editCanvas.gameObject.SetActive(false);
+            playCanvas.gameObject.SetActive(true);
+        }
     }
     public void ToggleWeatherPanel(bool v)
     {

@@ -362,18 +362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "{\r\n    \"data\": {\r\n        \"getCityByName\": {\r\n            \"id\":
-    \"1796236\",\r\n            \"name\": \"Shanghai\",\r\n            \"country\":
-    \"CN\",\r\n            \"coord\": {\r\n                \"lon\": 121.4581,\r\n               
-    \"lat\": 31.2222\r\n            },\r\n            \"weather\": {\r\n               
-    \"summary\": {\r\n                    \"title\": \"Rain\"\r\n               
-    },\r\n                \"temperature\": {\r\n                    \"actual\": 287.96,\r\n                   
-    \"feelsLike\": 287.9,\r\n                    \"min\": 287.52,\r\n                   
-    \"max\": 288.11\r\n                },\r\n                \"wind\": {\r\n                   
-    \"speed\": 0.45,\r\n                    \"deg\": 257\r\n                },\r\n               
-    \"clouds\": {\r\n                    \"all\": 75,\r\n                    \"visibility\":
-    4000,\r\n                    \"humidity\": 92\r\n                },\r\n               
-    \"timestamp\": 1637498416\r\n            }\r\n        }\r\n    }\r\n}"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -400,7 +389,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.3
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
