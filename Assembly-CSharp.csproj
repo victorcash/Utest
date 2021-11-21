@@ -188,6 +188,7 @@
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IPlayableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\MapFileAccessUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\PlayCanvas.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\SwitchGameModeBtn.cs" />
     <Compile Include="Assets\TestObject.cs" />
     <Compile Include="Assets\TestUiObject.cs" />
     <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />

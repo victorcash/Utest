@@ -15,12 +15,9 @@ public class Services : MonoBehaviour
     public UiService ui;
     public static UiService Ui;
 
-    public GameStates gameStates;
     public static GameStates GameStates;
-
     public static CameraService Camera;
     public static PlayableService Playable;
-
     public static GamePlayElementService GamePlayElement;
 
     public ElementPlacer elementPlacer;
@@ -51,7 +48,7 @@ public class Services : MonoBehaviour
         SceneReferences = sceneReferences;
         Config = config;
         Database = database;
-        GameStates = gameStates;
+        GameStates = new GameStates();
         ElementPlacer = elementPlacer;
         PlayerInput = playerInput;
         playerInput.neverAutoSwitchControlSchemes = true;
@@ -60,7 +57,7 @@ public class Services : MonoBehaviour
         EnvironmentController = environmentController;
         GraphApi = graphApi;
         Ui = ui;
-        Ui.Init(GameStates.onGameModeChanged);
+        Ui.Init();
 
 
         Camera = new CameraService();

@@ -21,9 +21,9 @@ public class UiService : ScriptableObject
     [NonSerialized] public EnvironmentControlUi environmentControlUi;
 
     
-    public void Init(Action<GameMode> onGameModeChanged)
+    public void Init()
     {
-        onGameModeChanged += OnGameModeChanged;
+        Services.GameStates.onGameModeChanged += OnGameModeChanged;
         elementListUi = Instantiate(elementListUiPrefab, editCanvas.transform);
         elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
         environmentControlUi = Instantiate(environmentControlUiPrefab, editCanvas.transform);

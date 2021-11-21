@@ -1,8 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Struckd/GameStates")]
-public class GameStates : ScriptableObject
+public class GameStates
 {
     public Action<GameMode> onGameModeChanged = (_)=> { };
     public GameMode currentGameMode;
