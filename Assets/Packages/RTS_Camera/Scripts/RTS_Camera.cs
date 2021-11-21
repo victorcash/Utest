@@ -191,7 +191,7 @@ namespace RTS_Cam
         /// </summary>
         private void CameraUpdate()
         {
-            if (Services.ElementPlacer.IsPlacing()) return;
+            if (Services.GameElementPlacer.IsPlacing()) return;
             if (FollowingTarget)
                 FollowTarget();
             else

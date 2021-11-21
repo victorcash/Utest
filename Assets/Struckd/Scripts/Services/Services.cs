@@ -16,53 +16,42 @@ public class Services : MonoBehaviour
     public UiService ui;
     public static UiService Ui;
 
-    public GameStates gameStates;
-    public static GameStates GameStates;
-
-    public ElementPlacer elementPlacer;
-    public static ElementPlacer ElementPlacer;    
-    
-    public PlayerInput playerInput;
-    public static PlayerInput PlayerInput;
-
     public UICanvasControllerInput joyStick;
     public static UICanvasControllerInput JoyStick;
 
-    public GameElementEditor gameElementEditor;
+    public static GameStates GameStates;
+    public static GameElementPlacer GameElementPlacer;    
+    public static PlayerInput PlayerInput;
     public static GameElementEditor GameElementEditor;
-
-    public EnvironmentController environmentController;
     public static EnvironmentController EnvironmentController;
-
-    public SceneReferences sceneReferences;
     public static SceneReferences SceneReferences;
 
     public GraphApi graphApi;
     public static GraphApi GraphApi;
 
     public static CameraService Camera;
-    public static ElementService Element;
+    public static ElementService GameElement;
 
     private void Awake() => Init();
     private void Init()
     {
-        SceneReferences = sceneReferences;
+        SceneReferences = GetComponent<SceneReferences>();
         Config = config;
         Database = database;
-        GameStates = gameStates;
+        GameStates = GetComponent<GameStates>();
         JoyStick = joyStick;
         JoyStick.Init();
-        ElementPlacer = elementPlacer;
-        PlayerInput = playerInput;
-        playerInput.neverAutoSwitchControlSchemes = true;
-        GameElementEditor = gameElementEditor;
-        EnvironmentController = environmentController;
+        GameElementPlacer = GetComponent<GameElementPlacer>();
+        PlayerInput = GetComponent<PlayerInput>();
+        PlayerInput.neverAutoSwitchControlSchemes = true;
+        GameElementEditor = GetComponent<GameElementEditor>();
+        EnvironmentController = GetComponent<EnvironmentController>();
         GraphApi = graphApi;
         Ui = ui;
         Ui.Init();
         Camera = GetComponent<CameraService>();
         Camera.Init(GetComponentInChildren<CinemachineVirtualCamera>());
-        Element = new ElementService();
-        gameStates.SetGameMode(GameMode.Edit);
+        GameElement = new ElementService();
+        GameStates.SetGameMode(GameMode.Edit);
     }
 }

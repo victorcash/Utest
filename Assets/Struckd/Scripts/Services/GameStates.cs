@@ -21,16 +21,17 @@ public class GameStates : MonoBehaviour
     }
     private void SetGameAsEditMode()
     {
-        Services.Element.RemoveAllElements();
-        Services.Element.LoadMapData();
+        Services.GameElement.RemoveAllElements();
+        Services.GameElement.LoadElementsFromMapData();
         currentGameMode = GameMode.Edit;
         onGameModeChanged(currentGameMode);
     }
     private void SetGameAsPlayMode()
     {
-        var iPlayable = Services.Element.GetActivePlayable();
+        var iPlayable = Services.GameElement.GetActivePlayable();
         if (iPlayable != null)
         {
+            Services.GameElement.SaveElementsToMapData();
             currentGameMode = GameMode.Play;
             onGameModeChanged(currentGameMode);
         }

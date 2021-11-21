@@ -23,34 +23,6 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 #endif
 
-		private void Start()
-		{
-			Services.PlayerInput.onActionTriggered += InputTriggered;
-		}
-
-		private void InputTriggered(InputAction.CallbackContext context)
-		{
-            if (context.action.name == "Jump")
-            {
-				JumpInput(true);
-			}
-			if (context.action.name == "OnSprint")
-			{
-				SprintInput(true);
-			}
-			if (context.action.name == "Move")
-			{
-				var val = context.action.ReadValue<Vector2>();
-				MoveInput(val);
-			}
-			if (context.action.name == "Look")
-			{
-				var val = context.action.ReadValue<Vector2>();
-				LookInput(val);
-			}
-		}
-
-
 		public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;

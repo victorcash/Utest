@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class KillableBehaviour : GamePlayElementBehaviour, IKillable, IFaction
+public abstract class KillableBehaviour : GameElementBehaviour, IKillable, IFaction
 {
     [SerializeField] protected float hp = 100f;
     [SerializeField] protected float hpMax = 100f;

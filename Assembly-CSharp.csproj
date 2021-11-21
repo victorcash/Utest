@@ -145,12 +145,12 @@
     <Compile Include="Assets\Struckd\Scripts\CsvHelper.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\MapData.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\WeatherData.cs" />
-    <Compile Include="Assets\Struckd\Scripts\ElementPlacer.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\Faction.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\GameMode.cs" />
     <Compile Include="Assets\Struckd\Scripts\EnvironmentController.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GameElementPlacer.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
-    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementBehaviour.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GameElementBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\KillableBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\PlayableBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\TankBehaviour.cs" />

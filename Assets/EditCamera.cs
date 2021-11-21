@@ -27,7 +27,7 @@ public class EditCamera : MonoBehaviour
     private Vector3 camStartPos;
     void Update()
     {
-        if (!Services.ElementPlacer.IsPlacing())
+        if (!Services.GameElementPlacer.IsPlacing())
         {
 
         }

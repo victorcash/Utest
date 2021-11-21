@@ -9,7 +9,7 @@ public class TestUiObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Services.ElementPlacer.QueueElement(1);
+        Services.GameElementPlacer.QueueElement(1);
     }
 
     public void OnDrag(PointerEventData eventData)

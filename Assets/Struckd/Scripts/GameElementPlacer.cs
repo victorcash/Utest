@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ElementPlacer : MonoBehaviour
+public class GameElementPlacer : MonoBehaviour
 {
-    private GamePlayElementBehaviour currentElement;
+    private GameElementBehaviour currentElement;
     private GameMode gameMode => Services.GameStates.GetGameMode();
     private Camera editCamT => Services.SceneReferences.editCamera;
 #if UNITY_EDITOR
@@ -53,7 +53,7 @@ public class ElementPlacer : MonoBehaviour
                 var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
                 foreach (var hit in hits)
                 {
-                    var elemet = hit.collider.gameObject.GetComponent<GamePlayElementBehaviour>();
+                    var elemet = hit.collider.gameObject.GetComponent<GameElementBehaviour>();
                     if (elemet != null)
                     {
                         currentElement = elemet;
@@ -69,7 +69,7 @@ public class ElementPlacer : MonoBehaviour
         }
         if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {
-            currentElement = Services.Element.CreateGamePlayElement((int)queueId);
+            currentElement = Services.GameElement.CreateGamePlayElement((int)queueId);
             queueId = null;
             Services.Ui.ToggleElementList(false);
         }

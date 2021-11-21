@@ -71,7 +71,7 @@ public class UiService : ScriptableObject
         elementEditPanel?.ToggleVisibility(val);
     }
 
-    private List<ElementInterfaceUi> GetElementInterfaceUiPrefabs(GamePlayElementBehaviour element)
+    private List<ElementInterfaceUi> GetElementInterfaceUiPrefabs(GameElementBehaviour element)
     {
         List<ElementInterfaceUi> result = new List<ElementInterfaceUi>();
 
@@ -88,7 +88,7 @@ public class UiService : ScriptableObject
         return result;
     }
 
-    public void CreateElementInterfaceEditUi(GamePlayElementBehaviour element, RectTransform rt)
+    public void CreateElementInterfaceEditUi(GameElementBehaviour element, RectTransform rt)
     {
         var uiList = GetElementInterfaceUiPrefabs(element);
         foreach (var ui in uiList)

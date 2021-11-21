@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
+public abstract class GameElementBehaviour : MonoBehaviour, IPlacable
 {
     public int elementID;
     private bool isInit;
@@ -14,7 +14,7 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
         if (!isInit)
         {
             isInit = true;
-            Services.Element.InitElement(this, OnGameModeChanged);
+            Services.GameElement.InitElement(this, OnGameModeChanged);
         }
     }
 
@@ -28,7 +28,7 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
     }
     protected virtual void OnDestroy()
     {
-        Services.Element.CleanUpElement(this, OnGameModeChanged);
+        Services.GameElement.CleanUpElement(this, OnGameModeChanged);
     }
 
     public virtual void Deserialize(string[] entry)

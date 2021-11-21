@@ -5,31 +5,31 @@ public class TestObject : MonoBehaviour
     [ContextMenu(nameof(Save))]
     public void Save()
     {
-        Services.Element.SaveMapData();
+        Services.GameElement.SaveElementsToMapData();
     }
 
     [ContextMenu(nameof(Load))]
     public void Load()
     {
-        Services.Element.LoadMapData();
+        Services.GameElement.LoadElementsFromMapData();
     }
 
     [ContextMenu(nameof(Clear))]
     public void Clear()
     {
-        Services.Element.RemoveAllElements();
+        Services.GameElement.RemoveAllElements();
     }
 
     [ContextMenu(nameof(DragElement))]
     public void DragElement()
     {
-        Services.ElementPlacer.QueueElement(2);
+        Services.GameElementPlacer.QueueElement(2);
     }
 
     [ContextMenu(nameof(MapDataHasActivePlayable))]
     public void MapDataHasActivePlayable()
     {
-        Services.Element.MapDataHasActivePlayable();
+        Services.GameElement.MapDataHasActivePlayable();
     }
 }
 

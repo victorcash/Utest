@@ -26,7 +26,7 @@ public class CameraService : MonoBehaviour
         {
             Services.SceneReferences.editCamera.gameObject.SetActive(false);
             Services.SceneReferences.playCamera.gameObject.SetActive(true);
-            var target = Services.Element.GetActivePlayable();
+            var target = Services.GameElement.GetActivePlayable();
             Services.Camera.virtualCamera.Follow = target.CameraFollowRoot();
         }
     }

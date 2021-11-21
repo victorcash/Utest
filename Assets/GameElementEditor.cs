@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class GameElementEditor : MonoBehaviour
 {
-    public GamePlayElementBehaviour currentElement;
+    public GameElementBehaviour currentElement;
     private Camera editCamT => Services.SceneReferences.editCamera;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
@@ -20,7 +20,7 @@ public class GameElementEditor : MonoBehaviour
             bool hasElement = false;
             foreach (var hit in hits)
             {
-                var elemet = hit.collider.gameObject.GetComponent<GamePlayElementBehaviour>();
+                var elemet = hit.collider.gameObject.GetComponent<GameElementBehaviour>();
                 if (elemet != null)
                 {
                     hasElement = true;
@@ -43,7 +43,7 @@ public class GameElementEditor : MonoBehaviour
         Services.Ui.ToggleElementEditPanel(false);
     }
 
-    private void OnElementSelected(GamePlayElementBehaviour elemet)
+    private void OnElementSelected(GameElementBehaviour elemet)
     {
         if (currentElement == elemet) return;
         var contentRt = Services.Ui.elementEditPanel.content;

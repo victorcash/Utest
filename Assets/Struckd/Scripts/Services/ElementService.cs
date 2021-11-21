@@ -8,10 +8,10 @@ public class ElementService
     public List<IKillable> IKillables = new List<IKillable>();
     public List<IPlayable> IPlayables = new List<IPlayable>();
     public List<IPlacable> IPlacables = new List<IPlacable>();
-    private List<GamePlayElementBehaviour> gamePlayElements = new List<GamePlayElementBehaviour>();
+    private List<GameElementBehaviour> gamePlayElements = new List<GameElementBehaviour>();
     private GamePlayElementDatabase database => Services.Database;
 
-    public GamePlayElementBehaviour CreateGamePlayElement(int elementId)
+    public GameElementBehaviour CreateGamePlayElement(int elementId)
     {
         var element = database.GetElement(elementId);
         var elementsRoot = Services.SceneReferences.elementRoot;
@@ -20,7 +20,7 @@ public class ElementService
         return elementBehaviour;
     }
 
-    public GamePlayElementBehaviour CreateGamePlayElement(string entryString)
+    public GameElementBehaviour CreateGamePlayElement(string entryString)
     {
         var entry = entryString.Split(',');
         var elementID = int.Parse(entry[(int)CsvColumn.ElementId]);
@@ -29,7 +29,7 @@ public class ElementService
         return elementBehaviour;
     }
 
-    public void InitElement(GamePlayElementBehaviour element, Action<GameMode> onGameModeChanged)
+    public void InitElement(GameElementBehaviour element, Action<GameMode> onGameModeChanged)
     {
         gamePlayElements.Add(element);
         Services.GameStates.AddOnGameModeChangedListener(onGameModeChanged);
@@ -38,7 +38,7 @@ public class ElementService
         if (element is IPlacable) IPlacables.Add((IPlacable)element);
     }
 
-    public void CleanUpElement(GamePlayElementBehaviour element, Action<GameMode> onGameModeChanged)
+    public void CleanUpElement(GameElementBehaviour element, Action<GameMode> onGameModeChanged)
     {
         gamePlayElements.Remove(element);
         Services.GameStates.RemoveOnGameModeChangedListener(onGameModeChanged);
@@ -72,7 +72,7 @@ public class ElementService
         return null;
     }
 
-    public void SaveMapData()
+    public void SaveElementsToMapData()
     {
         var csv = new StringBuilder();
 
@@ -108,10 +108,10 @@ public class ElementService
         return result;
     }
 
-    public void LoadMapData(string filePath = "")
+    public void LoadElementsFromMapData(string filePath = "")
     {
         filePath = Application.persistentDataPath + "/Maps/temp.csv";
-        Services.Element.RemoveAllElements();
+        Services.GameElement.RemoveAllElements();
         StreamReader reader = new StreamReader(filePath);
         var csv = reader.ReadToEnd();
         reader.Close();

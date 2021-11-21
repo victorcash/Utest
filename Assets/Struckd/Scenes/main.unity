@@ -2506,13 +2506,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 8a663d9f543ff704a8f8058ca1ab337f, type: 2}
   database: {fileID: 11400000, guid: 201316573c8822d4aaa287bbee4191d3, type: 2}
   ui: {fileID: 11400000, guid: 370e94ad18287244494f99310b3a1cab, type: 2}
-  gameStates: {fileID: 1312188747}
-  elementPlacer: {fileID: 1312188739}
-  playerInput: {fileID: 1312188740}
   joyStick: {fileID: 1922051816}
-  gameElementEditor: {fileID: 1312188743}
-  environmentController: {fileID: 1312188744}
-  sceneReferences: {fileID: 1312188745}
   graphApi: {fileID: 11400000, guid: 339882127fc3cb14fafc494859dadb64, type: 2}
 --- !u!4 &1312188738
 Transform:

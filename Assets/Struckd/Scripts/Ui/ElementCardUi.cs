@@ -15,7 +15,7 @@ public class ElementCardUi : MonoBehaviour, IDragHandler, IBeginDragHandler
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Services.ElementPlacer.QueueElement(elementId);
+        Services.GameElementPlacer.QueueElement(elementId);
         EventSystem.current.SetSelectedGameObject(scrollRect.gameObject);
         scrollRect.OnBeginDrag(eventData);
     }
