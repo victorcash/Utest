@@ -140,6 +140,7 @@
     <Compile Include="Assets\Struckd\Scripts\ElementPlacer.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\Faction.cs" />
     <Compile Include="Assets\Struckd\Scripts\Enums\GameMode.cs" />
+    <Compile Include="Assets\Struckd\Scripts\EnvironmentController.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GamePlayElementBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\KillableBehaviour.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Assets\Struckd\Scripts\Ui\EditCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\ElementCardUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\ElementListUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\EnvironmentControlUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\ElementInterfaceUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IConsumableEditUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\InterfaceEdtor\IConsumerEditUi.cs" />

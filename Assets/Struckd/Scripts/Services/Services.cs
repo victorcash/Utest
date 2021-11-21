@@ -39,6 +39,9 @@ public class Services : MonoBehaviour
     public GameElementEditor gameElementEditor;
     public static GameElementEditor GameElementEditor;
 
+    public EnvironmentController environmentController;
+    public static EnvironmentController EnvironmentController;
+
 
     private void Awake() => Init();
     private void Init()
@@ -49,13 +52,15 @@ public class Services : MonoBehaviour
         Ui = ui;
         Ui.Init(editCanvas);
         GameStates = gameStates;
-        Camera = new CameraService(editCamera);
-        Playable = new PlayableService();
-        GamePlayElement = new GamePlayElementService();
         ElementPlacer = elementPlacer;
         PlayerInput = playerInput;
         playerInput.neverAutoSwitchControlSchemes = true;
         JoyStick = joyStick;
         GameElementEditor = gameElementEditor;
+        EnvironmentController = environmentController;
+
+        Camera = new CameraService(editCamera);
+        Playable = new PlayableService();
+        GamePlayElement = new GamePlayElementService();
     }
 }

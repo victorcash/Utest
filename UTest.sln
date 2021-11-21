@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StompyRobot.SRDebugger", "StompyRobot.SRDebugger.csproj", "{6B7EEFCD-0B36-B392-576B-904D3C1232DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StompyRobot.SRF", "StompyRobot.SRF.csproj", "{20DF80A4-2305-3068-96DD-70F42AA07365}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{9C868B72-A056-5F00-57EE-FAD8406D69BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StompyRobot.SRF", "StompyRobot.SRF.csproj", "{20DF80A4-2305-3068-96DD-70F42AA07365}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{BA613456-DBDF-819C-4BA8-5A69E0DAFBD2}"
 EndProject
@@ -27,14 +27,14 @@ Global
 		{6B7EEFCD-0B36-B392-576B-904D3C1232DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B7EEFCD-0B36-B392-576B-904D3C1232DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B7EEFCD-0B36-B392-576B-904D3C1232DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20DF80A4-2305-3068-96DD-70F42AA07365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20DF80A4-2305-3068-96DD-70F42AA07365}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20DF80A4-2305-3068-96DD-70F42AA07365}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20DF80A4-2305-3068-96DD-70F42AA07365}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9C868B72-A056-5F00-57EE-FAD8406D69BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9C868B72-A056-5F00-57EE-FAD8406D69BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C868B72-A056-5F00-57EE-FAD8406D69BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C868B72-A056-5F00-57EE-FAD8406D69BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20DF80A4-2305-3068-96DD-70F42AA07365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20DF80A4-2305-3068-96DD-70F42AA07365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20DF80A4-2305-3068-96DD-70F42AA07365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20DF80A4-2305-3068-96DD-70F42AA07365}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA613456-DBDF-819C-4BA8-5A69E0DAFBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA613456-DBDF-819C-4BA8-5A69E0DAFBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA613456-DBDF-819C-4BA8-5A69E0DAFBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
