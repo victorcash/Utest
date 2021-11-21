@@ -1,14 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [CreateAssetMenu(menuName = "Struckd/GameStates")]
 public class GameStates : ScriptableObject
 {
-    public GameMode gameMode;
+    public Action<GameMode> onGameModeChanged = (_)=> { };
+    public GameMode currentGameMode;
 
 
 
-
-
+    public void SwitchGameMode(GameMode gameMode)
+    {
+        currentGameMode = gameMode;
+        onGameModeChanged(currentGameMode);
+    }
 
 
 

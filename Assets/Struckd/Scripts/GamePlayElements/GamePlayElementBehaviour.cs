@@ -11,23 +11,27 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
     {
         Init();
     }
-    protected virtual void OnPlay(){}
-    protected virtual void OnEdit(){}
+    protected virtual void OnGameModeChanged(){}
     public void Init()
     {
         if (!isInit)
         {
             isInit = true;
-            Services.GamePlayElement.InitElement(this, OnPlay, OnEdit);
+            Services.GamePlayElement.InitElement(this, OnGameModeChanged);
         }
     }
+
+    protected virtual void OnGameModeChanged(GameMode gameMode)
+    {
+    }
+
     public void InjectData(string[] entry)
     {
         Deserialize(entry);
     }
     protected virtual void OnDestroy()
     {
-        Services.GamePlayElement.CleanUpElement(this, OnPlay, OnEdit);
+        Services.GamePlayElement.CleanUpElement(this, OnGameModeChanged);
     }
 
     public virtual void Deserialize(string[] entry)

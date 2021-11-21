@@ -10,13 +10,12 @@ public class GamePlayElementService
     public List<IPlayable> IPlayables = new List<IPlayable>();
     public List<IPlacable> IPlacables = new List<IPlacable>();
     private List<GamePlayElementBehaviour> gamePlayElements = new List<GamePlayElementBehaviour>();
-    private Action onPlay;
-    private Action onEdit;
+    private GamePlayElementDatabase database => Services.Database;
 
     public GamePlayElementBehaviour CreateGamePlayElement(int elementId)
     {
-        var element = Services.Database.GetElement(elementId);
-        var elementsRoot = Services.Config.elementsRoot;
+        var element = database.GetElement(elementId);
+        var elementsRoot = Services.SceneReferences.elementRoot;
         var prefab = element.prefab;
         var elementBehaviour = UnityEngine.Object.Instantiate(prefab, elementsRoot);
         return elementBehaviour;
@@ -31,21 +30,19 @@ public class GamePlayElementService
         return elementBehaviour;
     }
 
-    public void InitElement(GamePlayElementBehaviour element, Action onPlay, Action onEdit)
+    public void InitElement(GamePlayElementBehaviour element, Action<GameMode> onGameModeChanged)
     {
         gamePlayElements.Add(element);
-        this.onPlay += onPlay;
-        this.onEdit += onEdit;
+        Services.GameStates.onGameModeChanged += onGameModeChanged;
         if (element is IKillable) IKillables.Add((IKillable)element);
         if (element is IPlayable) IPlayables.Add((IPlayable)element);
         if (element is IPlacable) IPlacables.Add((IPlacable)element);
     }
 
-    public void CleanUpElement(GamePlayElementBehaviour element, Action onPlay, Action onEdit)
+    public void CleanUpElement(GamePlayElementBehaviour element, Action<GameMode> onGameModeChanged)
     {
         gamePlayElements.Remove(element);
-        this.onPlay -= onPlay;
-        this.onEdit -= onEdit;
+        Services.GameStates.onGameModeChanged -= onGameModeChanged;
         if (element is IKillable) IKillables.Remove((IKillable)element);
         if (element is IPlayable) IPlayables.Remove((IPlayable)element);
         if (element is IPlacable) IPlacables.Remove((IPlacable)element);

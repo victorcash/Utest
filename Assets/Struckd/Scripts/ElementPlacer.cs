@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class ElementPlacer : MonoBehaviour
 {
     private GamePlayElementBehaviour currentElement;
-    private GameMode gameMode => Services.GameStates.gameMode;
-    private Camera editCamT => Services.Camera.editCamera.cameraComp;
+    private GameMode gameMode => Services.GameStates.currentGameMode;
+    private Camera editCamT => Services.SceneReferences.editCamera.cameraComp;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
 #else

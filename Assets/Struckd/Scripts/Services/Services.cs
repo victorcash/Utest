@@ -5,11 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Services : MonoBehaviour
 {
-    [Header("SceneReferences")]
-    [SerializeField] private Transform elementsRoot;
-    [SerializeField] private EditCamera editCamera;
-    [SerializeField] private Canvas editCanvas;
-
     [Header("ScripableObjectRefereces")]
     public GameConfig config;
     public static GameConfig Config;
@@ -43,6 +38,9 @@ public class Services : MonoBehaviour
     public EnvironmentController environmentController;
     public static EnvironmentController EnvironmentController;
 
+    public SceneReferences sceneReferences;
+    public static SceneReferences SceneReferences;
+
     public GraphApi graphApi;
     public static GraphApi GraphApi;
 
@@ -50,8 +48,8 @@ public class Services : MonoBehaviour
     private void Awake() => Init();
     private void Init()
     {
+        SceneReferences = sceneReferences;
         Config = config;
-        Config.Init(elementsRoot);
         Database = database;
         GameStates = gameStates;
         ElementPlacer = elementPlacer;
@@ -62,10 +60,10 @@ public class Services : MonoBehaviour
         EnvironmentController = environmentController;
         GraphApi = graphApi;
         Ui = ui;
-        Ui.Init(editCanvas);
+        Ui.Init(GameStates.onGameModeChanged);
 
 
-        Camera = new CameraService(editCamera);
+        Camera = new CameraService();
         Playable = new PlayableService();
         GamePlayElement = new GamePlayElementService();
     }

@@ -12,19 +12,25 @@ public class UiService : ScriptableObject
     public ElementEditPanel elementEditPanelPrefab;
     public EnvironmentControlUi environmentControlUiPrefab;
     public CityCardUi cityCardPrefab;
+    public Canvas editCanvas => Services.SceneReferences.editCanvas;
     [NonSerialized] public ElementListUi elementListUi;
-    [NonSerialized] public Canvas editCanvas;
     [NonSerialized] public ElementEditPanel elementEditPanel;
     [NonSerialized] public EnvironmentControlUi environmentControlUi;
-
-    public void Init(Canvas editCanvas)
+    
+    public void Init(Action<GameMode> onGameModeChanged)
     {
-        this.editCanvas = editCanvas;
+        onGameModeChanged += OnGameModeChanged;
         elementListUi = Instantiate(elementListUiPrefab, editCanvas.transform);
         elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
         environmentControlUi = Instantiate(environmentControlUiPrefab, editCanvas.transform);
         environmentControlUi.Init();
     }
+
+    private void OnGameModeChanged(GameMode gameMode)
+    {
+        ToggleUIMode(gameMode);
+    }
+
     public void ToggleUIMode(GameMode gameMode)
     {
 

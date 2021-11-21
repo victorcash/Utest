@@ -1950,6 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312188738}
   - component: {fileID: 1312188737}
+  - component: {fileID: 1312188745}
   - component: {fileID: 1312188739}
   - component: {fileID: 1312188740}
   - component: {fileID: 1312188744}
@@ -1975,9 +1976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5f46bbc0ed19e4a837c6ed285cfb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementsRoot: {fileID: 1327839244}
-  editCamera: {fileID: 963194229}
-  editCanvas: {fileID: 2138546502}
   config: {fileID: 11400000, guid: 8a663d9f543ff704a8f8058ca1ab337f, type: 2}
   database: {fileID: 11400000, guid: 201316573c8822d4aaa287bbee4191d3, type: 2}
   ui: {fileID: 11400000, guid: 370e94ad18287244494f99310b3a1cab, type: 2}
@@ -1987,6 +1985,7 @@ MonoBehaviour:
   joyStick: {fileID: 1922051816}
   gameElementEditor: {fileID: 1312188743}
   environmentController: {fileID: 1312188744}
+  sceneReferences: {fileID: 1312188745}
   graphApi: {fileID: 11400000, guid: 339882127fc3cb14fafc494859dadb64, type: 2}
 --- !u!4 &1312188738
 Transform:
@@ -2123,6 +2122,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3be871a5d9cd14db820ff1c24e9dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1312188745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312188736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb2868f78f9c3f4393f1e5289337be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementRoot: {fileID: 1327839244}
+  editCamera: {fileID: 963194229}
+  appCanvas: {fileID: 1502425344}
+  editCanvas: {fileID: 2138546502}
+  playCanvas: {fileID: 1242236531}
 --- !u!1 &1327839243
 GameObject:
   m_ObjectHideFlags: 0

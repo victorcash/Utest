@@ -169,6 +169,7 @@
     <Compile Include="Assets\Struckd\Scripts\Services\GamePlayElementService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\GameStates.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\PlayableService.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Services\SceneReferences.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\Services.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\UiService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\AppCanvas.cs" />
