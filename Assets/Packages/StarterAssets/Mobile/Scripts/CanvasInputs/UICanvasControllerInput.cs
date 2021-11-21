@@ -28,7 +28,7 @@ namespace StarterAssets
             }
             if (gameMode == GameMode.Play)
             {
-                iPlayable = Services.GamePlayElement.GetActivePlayable();
+                iPlayable = Services.Element.GetActivePlayable();
             }
         }
 

@@ -350,7 +350,6 @@ namespace GraphQlClient.Core
             
 
             public void CompleteQuery(){
-                isComplete = true;
                 string data = null;
                 string parent = null;
                 Field previousField = null;

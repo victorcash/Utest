@@ -2441,6 +2441,7 @@ GameObject:
   - component: {fileID: 1312188743}
   - component: {fileID: 1312188742}
   - component: {fileID: 1312188741}
+  - component: {fileID: 1312188747}
   - component: {fileID: 1312188746}
   m_Layer: 0
   m_Name: =====GameService=====
@@ -2464,6 +2465,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 8a663d9f543ff704a8f8058ca1ab337f, type: 2}
   database: {fileID: 11400000, guid: 201316573c8822d4aaa287bbee4191d3, type: 2}
   ui: {fileID: 11400000, guid: 370e94ad18287244494f99310b3a1cab, type: 2}
+  gameStates: {fileID: 1312188747}
   elementPlacer: {fileID: 1312188739}
   playerInput: {fileID: 1312188740}
   joyStick: {fileID: 1922051816}
@@ -2633,6 +2635,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b060d74fd39dfb442a889d4ebec4bf07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1312188747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312188736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2777f35697548f84c8f9d6bf33807b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1327839243

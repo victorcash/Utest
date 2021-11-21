@@ -25,16 +25,16 @@ public class MapFileAccessUi : MonoBehaviour
 
     private void ClearMapBtn()
     {
-        Services.GamePlayElement.RemoveAllElements();
+        Services.Element.RemoveAllElements();
     }
 
     private void SaveMapToTemp()
     {
-        Services.GamePlayElement.SaveMapData();
+        Services.Element.SaveMapData();
     }
 
     private void LoadMapFromTemp()
     {
-        Services.GamePlayElement.LoadMapData();
+        Services.Element.LoadMapData();
     }
 }

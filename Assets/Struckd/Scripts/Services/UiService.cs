@@ -12,6 +12,12 @@ public class UiService : ScriptableObject
     public ElementEditPanel elementEditPanelPrefab;
     public EnvironmentControlUi environmentControlUiPrefab;
     public CityCardUi cityCardPrefab;
+
+    public void FloatNotification(string v)
+    {
+        Debug.Log(v);
+    }
+
     public Canvas editCanvas => Services.SceneReferences.editCanvas;
     private Canvas appCanvas => Services.SceneReferences.appCanvas;
     private Canvas playCanvas => Services.SceneReferences.playCanvas;

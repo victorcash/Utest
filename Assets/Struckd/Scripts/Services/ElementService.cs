@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEngine;
-public class GamePlayElementService
+public class ElementService
 {
     public List<IKillable> IKillables = new List<IKillable>();
     public List<IPlayable> IPlayables = new List<IPlayable>();
@@ -111,7 +111,7 @@ public class GamePlayElementService
     public void LoadMapData(string filePath = "")
     {
         filePath = Application.persistentDataPath + "/Maps/temp.csv";
-        Services.GamePlayElement.RemoveAllElements();
+        Services.Element.RemoveAllElements();
         StreamReader reader = new StreamReader(filePath);
         var csv = reader.ReadToEnd();
         reader.Close();

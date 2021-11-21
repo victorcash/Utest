@@ -69,7 +69,7 @@ public class ElementPlacer : MonoBehaviour
         }
         if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {
-            currentElement = Services.GamePlayElement.CreateGamePlayElement((int)queueId);
+            currentElement = Services.Element.CreateGamePlayElement((int)queueId);
             queueId = null;
             Services.Ui.ToggleElementList(false);
         }

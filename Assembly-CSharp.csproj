@@ -166,9 +166,8 @@
     <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GamePlayElement.cs" />
     <Compile Include="Assets\Struckd\Scripts\ScriptableObjects\GamePlayElementDatabase.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\CameraService.cs" />
-    <Compile Include="Assets\Struckd\Scripts\Services\GamePlayElementService.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Services\ElementService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\GameStates.cs" />
-    <Compile Include="Assets\Struckd\Scripts\Services\PlayableService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\SceneReferences.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\Services.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\UiService.cs" />

@@ -14,7 +14,7 @@ public class IPlayableEditUi : ElementInterfaceUi
     }
     private void SetAsPlayable()
     {
-        Services.GamePlayElement.ClearAllActiveIPlayable();
+        Services.Element.ClearAllActiveIPlayable();
         iPlayable.SetAsActivePlayable(true);
         button.image.color = iPlayable.IsActivePlayable() ? Color.green : Color.red;
     }

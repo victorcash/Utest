@@ -40,8 +40,7 @@ public class Services : MonoBehaviour
     public static GraphApi GraphApi;
 
     public static CameraService Camera;
-    public static PlayableService Playable;
-    public static GamePlayElementService GamePlayElement;
+    public static ElementService Element;
 
     private void Awake() => Init();
     private void Init()
@@ -61,10 +60,8 @@ public class Services : MonoBehaviour
         Ui = ui;
         Ui.Init();
 
-
         Camera = new CameraService();
-        Playable = new PlayableService();
-        GamePlayElement = new GamePlayElementService();
+        Element = new ElementService();
 
         gameStates.SetGameMode(GameMode.Edit);
     }

@@ -5,19 +5,19 @@ public class TestObject : MonoBehaviour
     [ContextMenu(nameof(Save))]
     public void Save()
     {
-        Services.GamePlayElement.SaveMapData();
+        Services.Element.SaveMapData();
     }
 
     [ContextMenu(nameof(Load))]
     public void Load()
     {
-        Services.GamePlayElement.LoadMapData();
+        Services.Element.LoadMapData();
     }
 
     [ContextMenu(nameof(Clear))]
     public void Clear()
     {
-        Services.GamePlayElement.RemoveAllElements();
+        Services.Element.RemoveAllElements();
     }
 
     [ContextMenu(nameof(DragElement))]
@@ -29,7 +29,7 @@ public class TestObject : MonoBehaviour
     [ContextMenu(nameof(MapDataHasActivePlayable))]
     public void MapDataHasActivePlayable()
     {
-        Services.GamePlayElement.MapDataHasActivePlayable();
+        Services.Element.MapDataHasActivePlayable();
     }
 }
 
