@@ -36,7 +36,7 @@ public class GameStates : MonoBehaviour
         }
         else
         {
-            Services.Ui.FloatNotification("You need to set a playable character first!");
+            Services.Ui.FloatingNotification("You need to set a playable character first!");
         }
     }
     public GameMode GetGameMode() => currentGameMode;

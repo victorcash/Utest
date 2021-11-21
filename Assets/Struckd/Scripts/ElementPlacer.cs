@@ -5,7 +5,7 @@ public class ElementPlacer : MonoBehaviour
 {
     private GamePlayElementBehaviour currentElement;
     private GameMode gameMode => Services.GameStates.GetGameMode();
-    private Camera editCamT => Services.SceneReferences.editCamera.cameraComp;
+    private Camera editCamT => Services.SceneReferences.editCamera;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
 #else

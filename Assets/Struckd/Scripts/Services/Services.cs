@@ -2,6 +2,7 @@
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class Services : MonoBehaviour
 {
@@ -59,10 +60,9 @@ public class Services : MonoBehaviour
         GraphApi = graphApi;
         Ui = ui;
         Ui.Init();
-
-        Camera = new CameraService();
+        Camera = GetComponent<CameraService>();
+        Camera.Init(GetComponentInChildren<CinemachineVirtualCamera>());
         Element = new ElementService();
-
         gameStates.SetGameMode(GameMode.Edit);
     }
 }

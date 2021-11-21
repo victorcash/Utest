@@ -13,20 +13,13 @@ public class UiService : ScriptableObject
     public EnvironmentControlUi environmentControlUiPrefab;
     public CityCardUi cityCardPrefab;
 
-    public void FloatNotification(string v)
-    {
-        Debug.Log(v);
-    }
-
+    [NonSerialized] public ElementListUi elementListUi;
+    [NonSerialized] public ElementEditPanel elementEditPanel;
+    [NonSerialized] public EnvironmentControlUi environmentControlUi;
     public Canvas editCanvas => Services.SceneReferences.editCanvas;
     private Canvas appCanvas => Services.SceneReferences.appCanvas;
     private Canvas playCanvas => Services.SceneReferences.playCanvas;
 
-    [NonSerialized] public ElementListUi elementListUi;
-    [NonSerialized] public ElementEditPanel elementEditPanel;
-    [NonSerialized] public EnvironmentControlUi environmentControlUi;
-
-    
     public void Init()
     {
         Services.GameStates.AddOnGameModeChangedListener(OnGameModeChanged);
@@ -34,6 +27,11 @@ public class UiService : ScriptableObject
         elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
         environmentControlUi = Instantiate(environmentControlUiPrefab, editCanvas.transform);
         environmentControlUi.Init();
+    }
+
+    public void FloatingNotification(string v)
+    {
+        Debug.Log(v);
     }
 
     private void OnGameModeChanged(GameMode gameMode)
@@ -48,8 +46,7 @@ public class UiService : ScriptableObject
             editCanvas.gameObject.SetActive(true);
             playCanvas.gameObject.SetActive(false);
         }
-
-        if (gameMode == GameMode.Play)
+        else if (gameMode == GameMode.Play)
         {
             editCanvas.gameObject.SetActive(false);
             playCanvas.gameObject.SetActive(true);

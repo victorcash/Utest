@@ -5,9 +5,9 @@ using UnityEngine;
 public class SceneReferences : MonoBehaviour
 {
     public Transform elementRoot;
-    public EditCamera editCamera;
+    public Camera editCamera;
+    public Camera playCamera;
     public Canvas appCanvas;
     public Canvas editCanvas;
     public Canvas playCanvas;
-
 }

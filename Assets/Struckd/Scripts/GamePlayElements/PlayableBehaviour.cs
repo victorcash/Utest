@@ -5,6 +5,7 @@ public class PlayableBehaviour : KillableBehaviour, IPlayable
 {
     private bool isActivePlayable;
     public StarterAssetsInputs input;
+    public Transform cameraFollowRoot;
     private void Awake()
     {
         input = GetComponentInChildren<StarterAssetsInputs>();
@@ -67,5 +68,10 @@ public class PlayableBehaviour : KillableBehaviour, IPlayable
     public void SetFree()
     {
         throw new System.NotImplementedException();
+    }
+
+    public Transform CameraFollowRoot()
+    {
+        return cameraFollowRoot;
     }
 }

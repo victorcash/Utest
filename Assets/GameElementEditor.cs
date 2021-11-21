@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class GameElementEditor : MonoBehaviour
 {
     public GamePlayElementBehaviour currentElement;
-    private Camera editCamT => Services.SceneReferences.editCamera.cameraComp;
+    private Camera editCamT => Services.SceneReferences.editCamera;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
 #else

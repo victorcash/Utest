@@ -2395,6 +2395,7 @@ MonoBehaviour:
   hpMax: 100
   faction: 0
   input: {fileID: 0}
+  cameraFollowRoot: {fileID: 6373115206228925603}
 --- !u!65 &919730542649796930
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,4 +13,5 @@ public interface IPlayable
     void JoyStickRight(Vector2 val);
     void JoyPadA();
     void JoyPadB();
+    Transform CameraFollowRoot();
 }
