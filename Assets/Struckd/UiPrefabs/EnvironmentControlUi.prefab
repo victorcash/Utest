@@ -999,7 +999,7 @@ PrefabInstance:
     - target: {fileID: 4005149103147726815, guid: 245521b5e1bfe394aa25d805128ed188,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -35.6
+      value: -96
       objectReference: {fileID: 0}
     - target: {fileID: 4005149103147726815, guid: 245521b5e1bfe394aa25d805128ed188,
         type: 3}
@@ -1024,7 +1024,7 @@ PrefabInstance:
     - target: {fileID: 8272086861633277863, guid: 245521b5e1bfe394aa25d805128ed188,
         type: 3}
       propertyPath: m_text
-      value: Dust Intensity
+      value: Fog Intensity
       objectReference: {fileID: 0}
     - target: {fileID: 8272086861633277863, guid: 245521b5e1bfe394aa25d805128ed188,
         type: 3}
@@ -1707,7 +1707,7 @@ PrefabInstance:
     - target: {fileID: 4005149103147726815, guid: 245521b5e1bfe394aa25d805128ed188,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -97.9
+      value: -157
       objectReference: {fileID: 0}
     - target: {fileID: 4005149103147726815, guid: 245521b5e1bfe394aa25d805128ed188,
         type: 3}
