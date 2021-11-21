@@ -1,24 +1,58 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnvironmentControlUi : MonoBehaviour
 {
+    public RectTransform content;
+    public Slider timeSlider;
     public Slider rainSlider;
     public Slider fogSlider;
     public Slider thunderSlider;
     public Slider dustSlider;
-    public Slider timeSlider;
+    public Slider snowSlider;
+    public RectTransform cityContent;
+    public TMP_Text jsonDisplay;
+    public Button closeBtn;
+
     private EnvironmentController controller;
-    private void Awake()
+    public void ToggleVisibility(bool val)
+    {
+        content.gameObject.SetActive(val);
+    }
+    public void Init()
     {
         controller = Services.EnvironmentController;
         rainSlider.onValueChanged.AddListener(controller.SetRainIntensity);
         fogSlider.onValueChanged.AddListener(controller.SetFogIntensity);
         thunderSlider.onValueChanged.AddListener(controller.SetThunderIntensity);
         dustSlider.onValueChanged.AddListener(controller.SetDustIntensity);
+        snowSlider.onValueChanged.AddListener(controller.SetSnowIntensity);
         timeSlider.onValueChanged.AddListener(controller.SetTime);
+        closeBtn.onClick.AddListener(()=> { Services.Ui.ToggleWeatherPanel(false); });
+        ToggleVisibility(false);
+        CreateCityCards();
+    }
+
+    public void SetCurrentCity(string cityName)
+    {
+        Services.EnvironmentController.GetWeatherData(cityName, OnGetWeathData);
+    }
+
+    private void OnGetWeathData(string json)
+    {
+        jsonDisplay.text = json;
+    }
+
+    private void CreateCityCards()
+    {
+        var cities = Services.Config.cities;
+        var cityCardPrefab = Services.Ui.cityCardPrefab;
+        foreach (var city in cities)
+        {
+            var cityCard = Instantiate(cityCardPrefab, cityContent);
+            cityCard.SetupCard(city, this);
+        }
     }
 
     private void UpdateUI()

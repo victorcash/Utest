@@ -53,8 +53,6 @@ public class Services : MonoBehaviour
         Config = config;
         Config.Init(elementsRoot);
         Database = database;
-        Ui = ui;
-        Ui.Init(editCanvas);
         GameStates = gameStates;
         ElementPlacer = elementPlacer;
         PlayerInput = playerInput;
@@ -63,6 +61,9 @@ public class Services : MonoBehaviour
         GameElementEditor = gameElementEditor;
         EnvironmentController = environmentController;
         GraphApi = graphApi;
+        Ui = ui;
+        Ui.Init(editCanvas);
+
 
         Camera = new CameraService(editCamera);
         Playable = new PlayableService();

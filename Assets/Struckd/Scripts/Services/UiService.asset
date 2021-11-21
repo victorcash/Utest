@@ -35,3 +35,7 @@ MonoBehaviour:
     type: 3}
   elementEditPanelPrefab: {fileID: 4932867302177419286, guid: 381d583085f6d2f46aa6d2ca07bf1714,
     type: 3}
+  environmentControlUiPrefab: {fileID: 3987579838507248347, guid: 7a4b3d10c1e704844a37c3ad4a4b6d40,
+    type: 3}
+  cityCardPrefab: {fileID: 4541734140683465000, guid: 5d015aad2acad7743b45fe5519cceb68,
+    type: 3}

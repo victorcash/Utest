@@ -15,7 +15,13 @@ MonoBehaviour:
   testVal: 0
   testFval: 0
   CsvWidth: 20
-  HpRange: 500
   ElementLayer:
     serializedVersion: 2
     m_Bits: 1
+  cities:
+  - London
+  - Berlin
+  - Moscow
+  - New York
+  - Sydney
+  - Hong kong

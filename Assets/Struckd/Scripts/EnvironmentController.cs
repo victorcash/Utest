@@ -12,13 +12,14 @@ public class EnvironmentController : MonoBehaviour
     public float fog { private set; get; }
     public float thunder { private set; get; }
     public float dust { private set; get; }
+    public float snow { private set; get; }
     public float time { private set; get; }
     public Action<float> OnRainChanged = (_) => { };
     public Action<float> OnFogChanged = (_) => { };
     public Action<float> OnThunderChanged = (_) => { };
     public Action<float> OnDustChanged = (_) => { };
+    public Action<float> OnSnowChanged = (_) => { };
     public Action<float> OnTimeChanged = (_) => { };
-    public InputField cityInput;
 
     public void SetRainIntensity(float val)
     {
@@ -44,18 +45,20 @@ public class EnvironmentController : MonoBehaviour
     {
         OnDustChanged(val);
     }
-
-    public async void GetWeatherData()
+    public void SetSnowIntensity(float val)
+    {
+        OnSnowChanged(val);
+    }
+    public async void GetWeatherData(string cityName, Action<string> OnHaveData)
     {
         var graph = Services.GraphApi;
         GraphApi.Query query = graph.GetQueryByName("GetCityByName", GraphApi.Query.Type.Query);
-        query.SetArgs(new { name = "Shanghai" });
+        query.SetArgs(new { name = cityName });
         UnityWebRequest request = await graph.Post(query);
         var json = request.downloadHandler.text;
         var text = HttpHandler.FormatJson(json);
-
+        OnHaveData(text);
         var wd = JsonConvert.DeserializeObject<WeatherData>(json);
-
         Debug.Log(wd.data.getCityByName.name);
         Debug.Log(wd.data.getCityByName.id);
     }

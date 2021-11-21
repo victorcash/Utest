@@ -20,6 +20,7 @@ public class MapFileAccessUi : MonoBehaviour
 
     private void Test()
     {
+        Services.Ui.ToggleWeatherPanel(true);
     }
 
     private void ClearMapBtn()

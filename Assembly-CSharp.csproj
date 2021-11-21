@@ -172,6 +172,7 @@
     <Compile Include="Assets\Struckd\Scripts\Services\Services.cs" />
     <Compile Include="Assets\Struckd\Scripts\Services\UiService.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\AppCanvas.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Ui\CityCardUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\EditCanvas.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\ElementCardUi.cs" />
     <Compile Include="Assets\Struckd\Scripts\Ui\ElementListUi.cs" />
