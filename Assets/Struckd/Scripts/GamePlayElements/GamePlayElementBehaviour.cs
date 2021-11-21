@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
 {
@@ -11,7 +9,6 @@ public abstract class GamePlayElementBehaviour : MonoBehaviour, IPlacable
     {
         Init();
     }
-    protected virtual void OnGameModeChanged(){}
     public void Init()
     {
         if (!isInit)

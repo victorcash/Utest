@@ -1,29 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-public class GameStates
+public class GameStates : MonoBehaviour
 {
-    public Action<GameMode> onGameModeChanged = (_)=> { };
-    public GameMode currentGameMode;
-
-
-
-    public void SwitchGameMode(GameMode gameMode)
+    private Action<GameMode> onGameModeChanged = (_)=> { };
+    private GameMode currentGameMode;
+    public void SetGameMode(GameMode gameMode)
     {
         currentGameMode = gameMode;
         onGameModeChanged(currentGameMode);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public GameMode GetGameMode() => currentGameMode;
+    public void AddOnGameModeChangedListener(Action<GameMode> callback)
+    {
+        onGameModeChanged += callback;
+    }
+    public void RemoveOnGameModeChangedListener(Action<GameMode> callback)
+    {
+        onGameModeChanged -= callback;
+    }
 }

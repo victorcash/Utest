@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEngine;
-
 public class GamePlayElementService
 {
     public List<IKillable> IKillables = new List<IKillable>();
@@ -33,7 +32,7 @@ public class GamePlayElementService
     public void InitElement(GamePlayElementBehaviour element, Action<GameMode> onGameModeChanged)
     {
         gamePlayElements.Add(element);
-        Services.GameStates.onGameModeChanged += onGameModeChanged;
+        Services.GameStates.AddOnGameModeChangedListener(onGameModeChanged);
         if (element is IKillable) IKillables.Add((IKillable)element);
         if (element is IPlayable) IPlayables.Add((IPlayable)element);
         if (element is IPlacable) IPlacables.Add((IPlacable)element);
@@ -42,7 +41,7 @@ public class GamePlayElementService
     public void CleanUpElement(GamePlayElementBehaviour element, Action<GameMode> onGameModeChanged)
     {
         gamePlayElements.Remove(element);
-        Services.GameStates.onGameModeChanged -= onGameModeChanged;
+        Services.GameStates.RemoveOnGameModeChangedListener(onGameModeChanged);
         if (element is IKillable) IKillables.Remove((IKillable)element);
         if (element is IPlayable) IPlayables.Remove((IPlayable)element);
         if (element is IPlacable) IPlacables.Remove((IPlacable)element);

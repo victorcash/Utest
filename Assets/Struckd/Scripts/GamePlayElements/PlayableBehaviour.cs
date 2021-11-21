@@ -9,6 +9,15 @@ public class PlayableBehaviour : KillableBehaviour, IPlayable
     {
         input = GetComponentInChildren<StarterAssetsInputs>();
     }
+    protected override void OnGameModeChanged(GameMode gameMode)
+    {
+        base.OnGameModeChanged(gameMode);
+        if (gameMode == GameMode.Play)
+        {
+            var characterController = GetComponentInChildren<CharacterController>();
+            if (characterController) characterController.enabled = true;
+        }
+    }
     public override string[] Serialize()
     {
         var entry = base.Serialize();

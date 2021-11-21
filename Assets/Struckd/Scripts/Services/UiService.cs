@@ -23,12 +23,11 @@ public class UiService : ScriptableObject
     
     public void Init()
     {
-        Services.GameStates.onGameModeChanged += OnGameModeChanged;
+        Services.GameStates.AddOnGameModeChangedListener(OnGameModeChanged);
         elementListUi = Instantiate(elementListUiPrefab, editCanvas.transform);
         elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
         environmentControlUi = Instantiate(environmentControlUiPrefab, editCanvas.transform);
         environmentControlUi.Init();
-        ToggleUIMode(GameMode.Edit);
     }
 
     private void OnGameModeChanged(GameMode gameMode)

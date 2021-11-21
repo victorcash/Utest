@@ -16,7 +16,7 @@ MonoBehaviour:
   queries:
   - name: GetCityByName
     type: 0
-    query: "query GetCityByName{\n    getCityByName(  name :\"Moscow\" ){\n       
+    query: "query GetCityByName{\n    getCityByName(  name :\"New York\" ){\n       
       id\n        name\n        country\n        coord{\n            lon\n           
       lat\n        }\n        weather{\n            summary{\n                title\n               
       description\n                icon\n        }\n            temperature{\n               

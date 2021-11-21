@@ -15,10 +15,8 @@ public class Services : MonoBehaviour
     public UiService ui;
     public static UiService Ui;
 
+    public GameStates gameStates;
     public static GameStates GameStates;
-    public static CameraService Camera;
-    public static PlayableService Playable;
-    public static GamePlayElementService GamePlayElement;
 
     public ElementPlacer elementPlacer;
     public static ElementPlacer ElementPlacer;    
@@ -41,6 +39,9 @@ public class Services : MonoBehaviour
     public GraphApi graphApi;
     public static GraphApi GraphApi;
 
+    public static CameraService Camera;
+    public static PlayableService Playable;
+    public static GamePlayElementService GamePlayElement;
 
     private void Awake() => Init();
     private void Init()
@@ -48,11 +49,12 @@ public class Services : MonoBehaviour
         SceneReferences = sceneReferences;
         Config = config;
         Database = database;
-        GameStates = new GameStates();
+        GameStates = gameStates;
+        JoyStick = joyStick;
+        JoyStick.Init();
         ElementPlacer = elementPlacer;
         PlayerInput = playerInput;
         playerInput.neverAutoSwitchControlSchemes = true;
-        JoyStick = joyStick;
         GameElementEditor = gameElementEditor;
         EnvironmentController = environmentController;
         GraphApi = graphApi;
@@ -63,5 +65,7 @@ public class Services : MonoBehaviour
         Camera = new CameraService();
         Playable = new PlayableService();
         GamePlayElement = new GamePlayElementService();
+
+        gameStates.SetGameMode(GameMode.Edit);
     }
 }

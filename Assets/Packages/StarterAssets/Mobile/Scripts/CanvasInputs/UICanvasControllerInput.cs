@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace StarterAssets
@@ -8,51 +9,46 @@ namespace StarterAssets
         public UIVirtualJoystick rightJoystick;
         public UIVirtualButton buttonA;
         public UIVirtualButton buttonB;
+        private IPlayable iPlayable;
 
-        public GamePlayElementBehaviour playable;
-        public IPlayable iPlayable;
-
-        [Header("Output")]
-        public StarterAssetsInputs starterAssetsInputs;
-
-        private void Awake()
+        public void Init()
         {
             leftJoystick.joystickOutputEvent.AddListener(VirtualMoveInput);
             rightJoystick.joystickOutputEvent.AddListener(VirtualLookInput);
             buttonA.buttonStateOutputEvent.AddListener(VirtualJumpInput);
             buttonB.buttonStateOutputEvent.AddListener(VirtualSprintInput);
+            Services.GameStates.AddOnGameModeChangedListener(OnGameModeChanged);
+        }
 
-            iPlayable = (IPlayable)playable;
-        }
-        public void SetControlTarget(StarterAssetsInputs inputs)
+        private void OnGameModeChanged(GameMode gameMode)
         {
-            starterAssetsInputs = inputs;
+            if(gameMode == GameMode.Edit)
+            {
+                iPlayable = null;
+            }
+            if (gameMode == GameMode.Play)
+            {
+                iPlayable = Services.GamePlayElement.GetActivePlayable();
+            }
         }
-        public void SetControlTarget(IPlayable iPlayable)
-        {
-            this.iPlayable = iPlayable;
-        }
+
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
-            starterAssetsInputs?.MoveInput(virtualMoveDirection);
             iPlayable?.JoyStickLeft(virtualMoveDirection);
         }
 
         public void VirtualLookInput(Vector2 virtualLookDirection)
         {
-            starterAssetsInputs?.LookInput(virtualLookDirection);
             iPlayable?.JoyStickRight(virtualLookDirection);
         }
 
         public void VirtualJumpInput(bool virtualJumpState)
         {
-            starterAssetsInputs?.JumpInput(virtualJumpState);
             iPlayable?.JoyPadA();
         }
 
         public void VirtualSprintInput(bool virtualSprintState)
         {
-            starterAssetsInputs?.SprintInput(virtualSprintState);
             iPlayable?.JoyPadB();
         }
     }
