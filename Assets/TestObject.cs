@@ -27,6 +27,12 @@ public class TestObject : MonoBehaviour
     {
         Services.ElementPlacer.QueueElement(2);
     }
+
+    [ContextMenu(nameof(MapDataHasActivePlayable))]
+    public void MapDataHasActivePlayable()
+    {
+        Services.GamePlayElement.MapDataHasActivePlayable();
+    }
 }
 
 

@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using UnityEngine;
 
 public class GamePlayElementService
 {
     public List<IKillable> IKillables = new List<IKillable>();
+    public List<IPlayable> IPlayables = new List<IPlayable>();
     private List<GamePlayElementBehaviour> gamePlayElements = new List<GamePlayElementBehaviour>();
     private Action onPlay;
     private Action onEdit;
@@ -37,6 +36,7 @@ public class GamePlayElementService
         this.onPlay += onPlay;
         this.onEdit += onEdit;
         if (element is IKillable) IKillables.Add((IKillable)element);
+        if (element is IPlayable) IPlayables.Add((IPlayable)element);
     }
 
     public void CleanUpElement(GamePlayElementBehaviour element, Action onPlay, Action onEdit)
@@ -45,6 +45,15 @@ public class GamePlayElementService
         this.onPlay -= onPlay;
         this.onEdit -= onEdit;
         if (element is IKillable) IKillables.Remove((IKillable)element);
+        if (element is IPlayable) IPlayables.Remove((IPlayable)element);
+    }
+
+    public void ClearAllActiveIPlayable()
+    {
+        foreach (var p in IPlayables)
+        {
+            p.SetAsActivePlayable(false);
+        }
     }
 
     public void RemoveAllElements()
@@ -79,7 +88,7 @@ public class GamePlayElementService
 #endif
     }
 
-    public string BuildHeader(Enum enumType)
+    private string BuildHeader(Enum enumType)
     {
         var result = string.Empty;
         var headerEnum = Enum.GetValues(enumType.GetType());
@@ -91,10 +100,10 @@ public class GamePlayElementService
         return result;
     }
 
-    public void LoadMapData()
+    public void LoadMapData(string filePath = "")
     {
+        filePath = Application.persistentDataPath + "/Maps/temp.csv";
         Services.GamePlayElement.RemoveAllElements();
-        string filePath = Application.persistentDataPath + "/Maps/temp.csv";
         StreamReader reader = new StreamReader(filePath);
         var csv = reader.ReadToEnd();
         reader.Close();
@@ -108,6 +117,28 @@ public class GamePlayElementService
         {
             CreateGamePlayElement(entry);
         }
+    }
+
+    public bool MapDataHasActivePlayable(string filePath = "")
+    {
+        filePath = Application.persistentDataPath + "/Maps/temp.csv";
+        StreamReader reader = new StreamReader(filePath);
+        var csv = reader.ReadToEnd();
+        reader.Close();
+        string[] entries = csv.Split(new char[] { '\n' });
+        //remove header, remove last 2 lines
+        entries = entries.RemoveAt(0);
+        entries = entries.RemoveAt(entries.Length - 1);
+        entries = entries.RemoveAt(entries.Length - 1);
+
+        bool hasActive = false;
+        foreach (var entry in entries)
+        {
+            var succes = bool.TryParse(entry.Split(',')[(int)CsvColumn.IsActivePlayable], out var entryResult);
+            if (succes) hasActive |= entryResult;
+        }
+        Debug.Log("hasActive " + hasActive);
+        return hasActive;
     }
 }
 

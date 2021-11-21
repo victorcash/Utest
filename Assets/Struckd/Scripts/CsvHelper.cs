@@ -37,7 +37,8 @@ public enum CsvColumn
     ScalZ = 9,
     Hp = 10,
     HpMax = 11,
-    Faction
+    Faction = 12,
+    IsActivePlayable = 13
 }
 
 public static class CSVHelper

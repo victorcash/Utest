@@ -5,14 +5,26 @@ using UnityEngine;
 
 public class PlayableBehaviour : KillableBehaviour, IPlayable
 {
+    private bool isActivePlayable;
     public StarterAssetsInputs input;
     private void Awake()
     {
         input = GetComponentInChildren<StarterAssetsInputs>();
     }
-    public void IsSetPlayable()
+    public override string[] Serialize()
     {
-        throw new System.NotImplementedException();
+        var entry = base.Serialize();
+        entry.SetValue(IsActivePlayable(), CsvColumn.IsActivePlayable);
+        return entry;
+    }
+    public override void Deserialize(string[] entry)
+    {
+        base.Deserialize(entry);
+        SetAsActivePlayable(bool.Parse(entry.GetValue(CsvColumn.IsActivePlayable)));
+    }
+    public bool IsActivePlayable()
+    {
+        return isActivePlayable;
     }
 
     public void JoyPadA()
@@ -40,9 +52,9 @@ public class PlayableBehaviour : KillableBehaviour, IPlayable
         throw new System.NotImplementedException();
     }
 
-    public void SetAsPlayable()
+    public void SetAsActivePlayable(bool val)
     {
-        throw new System.NotImplementedException();
+        isActivePlayable = val;
     }
 
     public void SetFree()

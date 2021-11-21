@@ -6,8 +6,8 @@ public interface IPlayable
 {
     void Possesse();
     void SetFree();
-    void SetAsPlayable();
-    void IsSetPlayable();
+    void SetAsActivePlayable(bool val);
+    bool IsActivePlayable();
 
     void JoyStickLeft(Vector2 val);
     void JoyStickRight(Vector2 val);
