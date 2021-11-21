@@ -6,7 +6,6 @@ using System.Net.WebSockets;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;

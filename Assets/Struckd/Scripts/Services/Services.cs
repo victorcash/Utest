@@ -1,4 +1,5 @@
-﻿using StarterAssets;
+﻿using GraphQlClient.Core;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -42,6 +43,9 @@ public class Services : MonoBehaviour
     public EnvironmentController environmentController;
     public static EnvironmentController EnvironmentController;
 
+    public GraphApi graphApi;
+    public static GraphApi GraphApi;
+
 
     private void Awake() => Init();
     private void Init()
@@ -58,6 +62,7 @@ public class Services : MonoBehaviour
         JoyStick = joyStick;
         GameElementEditor = gameElementEditor;
         EnvironmentController = environmentController;
+        GraphApi = graphApi;
 
         Camera = new CameraService(editCamera);
         Playable = new PlayableService();

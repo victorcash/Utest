@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
-  m_Name: Pokemon
+  m_Name: Weather
   m_EditorClassIdentifier: 
   url: https://graphql-weather-api.herokuapp.com/
   queries:
   - name: GetCityByName
     type: 0
-    query: "query GetCityByName{\n    getCityByName(  name :\"shanghai\" ){\n       
-      id\n        name\n        country\n        coord{\n            lon\n           
-      lat\n        }\n        weather{\n            summary{\n                title\n               
-      title\n                title\n        }\n            temperature{\n               
+    query: "query GetCityByName{\n    getCityByName(Shanghai){\n        id\n       
+      name\n        country\n        coord{\n            lon\n            lat\n       
+      }\n        weather{\n            summary{\n                title\n               
+      description\n                icon\n        }\n            temperature{\n               
       actual\n                feelsLike\n                min\n                max\n       
       }\n            wind{\n                speed\n                deg\n        }\n           
       clouds{\n                all\n                visibility\n                humidity\n       
@@ -167,8 +167,8 @@ MonoBehaviour:
       - name: icon
         type: String
       hasChanged: 0
-    - index: 0
-      name: title
+    - index: 1
+      name: description
       type: String
       parentIndexes: 0600000007000000
       hasSubField: 0
@@ -180,8 +180,8 @@ MonoBehaviour:
       - name: icon
         type: String
       hasChanged: 0
-    - index: 0
-      name: title
+    - index: 2
+      name: icon
       type: String
       parentIndexes: 0600000007000000
       hasSubField: 0

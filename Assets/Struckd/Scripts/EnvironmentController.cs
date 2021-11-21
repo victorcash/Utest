@@ -1,5 +1,10 @@
-﻿using System;
+﻿using GraphQlClient.Core;
+using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class EnvironmentController : MonoBehaviour
 {
@@ -13,6 +18,7 @@ public class EnvironmentController : MonoBehaviour
     public Action<float> OnThunderChanged = (_) => { };
     public Action<float> OnDustChanged = (_) => { };
     public Action<float> OnTimeChanged = (_) => { };
+    public InputField cityInput;
 
     public void SetRainIntensity(float val)
     {
@@ -38,4 +44,20 @@ public class EnvironmentController : MonoBehaviour
     {
         OnDustChanged(val);
     }
+
+    public async void GetWeatherData()
+    {
+        var graph = Services.GraphApi;
+        GraphApi.Query query = graph.GetQueryByName("GetCityByName", GraphApi.Query.Type.Query);
+        query.SetArgs(new { name = "Shanghai" });
+        UnityWebRequest request = await graph.Post(query);
+        var json = request.downloadHandler.text;
+        var text = HttpHandler.FormatJson(json);
+
+        var wd = JsonConvert.DeserializeObject<WeatherData>(json);
+
+        Debug.Log(wd.data.getCityByName.name);
+        Debug.Log(wd.data.getCityByName.id);
+    }
 }
+

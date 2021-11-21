@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TestObject : MonoBehaviour
 {
@@ -34,4 +32,5 @@ public class TestObject : MonoBehaviour
         Services.GamePlayElement.MapDataHasActivePlayable();
     }
 }
+
 
