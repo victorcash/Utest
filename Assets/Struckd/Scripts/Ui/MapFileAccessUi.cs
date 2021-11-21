@@ -21,6 +21,9 @@ public class MapFileAccessUi : MonoBehaviour
     private void Test()
     {
         Services.Ui.ToggleWeatherPanel(true);
+        //var sec = (int)DateTime.Now.TimeOfDay.TotalSeconds;
+        //Services.SceneReferences.todLight.SetTODSec(sec);
+        //Debug.Log(sec);
     }
 
     private void ClearMapBtn()

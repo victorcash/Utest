@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 public class TODDirectionalLight : MonoBehaviour
 {
     public Gradient lightColors;
@@ -14,18 +11,29 @@ public class TODDirectionalLight : MonoBehaviour
     public Material skybox;
 
     [Range(0f, 86400f)]
-    public float testVal;
+    public float sec;
 
     private void Awake()
     {
         dLight = GetComponent<Light>();
     }
+    private void Start()
+    {
+        Services.EnvironmentController.OnTimeChanged += OnTimeChanged;
+    }
+
+    private void OnTimeChanged(float val)
+    {
+        SetTODSec(val);
+    }
+
     private void Update()
     {
-        SetTOD(testVal);
+        SetTODSec(sec);
     }
-    public void SetTOD(float val)
+    public void SetTODSec(float val)
     {
+        sec = val;
         var sid = Services.Config.SecondsInDay;
         var nVal = val/ sid;
         var lightColor = lightColors.Evaluate(nVal);

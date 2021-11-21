@@ -1,10 +1,8 @@
 ﻿using GraphQlClient.Core;
 using Newtonsoft.Json;
 using System;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
 
 public class EnvironmentController : MonoBehaviour
 {
@@ -21,6 +19,14 @@ public class EnvironmentController : MonoBehaviour
     public Action<float> OnSnowChanged = (_) => { };
     public Action<float> OnTimeChanged = (_) => { };
 
+    public string SecondsToTimeString(float seconds)
+    {
+        TimeSpan time = TimeSpan.FromSeconds(seconds);
+        string str = time.ToString(@"hh\:mm");
+        return str;
+    }
+    public float SecondsToNormalized(float seconds) => seconds / Services.Config.SecondsInDay;
+    public float NormalizedToSeconds(float nval) => nval * Services.Config.SecondsInDay;
     public void SetRainIntensity(float val)
     {
         OnRainChanged(val);

@@ -10,4 +10,5 @@ public class SceneReferences : MonoBehaviour
     public Canvas appCanvas;
     public Canvas editCanvas;
     public Canvas playCanvas;
+    public TODDirectionalLight todLight;
 }

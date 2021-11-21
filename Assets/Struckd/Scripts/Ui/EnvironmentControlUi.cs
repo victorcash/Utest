@@ -13,6 +13,7 @@ public class EnvironmentControlUi : MonoBehaviour
     public Slider snowSlider;
     public RectTransform cityContent;
     public TMP_Text jsonDisplay;
+    public TMP_Text timeText;
     public Button closeBtn;
 
     private EnvironmentController controller;
@@ -28,10 +29,16 @@ public class EnvironmentControlUi : MonoBehaviour
         thunderSlider.onValueChanged.AddListener(controller.SetThunderIntensity);
         dustSlider.onValueChanged.AddListener(controller.SetDustIntensity);
         snowSlider.onValueChanged.AddListener(controller.SetSnowIntensity);
-        timeSlider.onValueChanged.AddListener(controller.SetTime);
+        timeSlider.onValueChanged.AddListener(OnTimeSlider);
         closeBtn.onClick.AddListener(()=> { Services.Ui.ToggleWeatherPanel(false); });
         ToggleVisibility(false);
         CreateCityCards();
+    }
+
+    private void OnTimeSlider(float val)
+    {
+        controller.SetTime(val);
+        timeText.text = Services.EnvironmentController.SecondsToTimeString(val);
     }
 
     public void SetCurrentCity(string cityName)
