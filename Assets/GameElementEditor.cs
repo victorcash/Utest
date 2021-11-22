@@ -42,16 +42,14 @@ public class GameElementEditor : MonoBehaviour
                 if (elemet != null)
                 {
                     hasElement = true;
+                    OnElementSelected(elemet);
                     break;
                 }
             }
 
-            if ((Time.realtimeSinceStartup - mouseDownTimeStamp) < Services.Config.TapSpeed && !hasElement)
+            if ((Time.realtimeSinceStartup - mouseDownTimeStamp) < Services.Config.durationCountAsHold && !hasElement)
             {
-                if (!hasElement)
-                {
-                    OnElementDeselected();
-                }
+                OnElementDeselected();
             }
         }
         if (currentElement == null) Services.Ui.elementEditPanel.ToggleVisibility(false);

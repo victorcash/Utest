@@ -11,5 +11,5 @@ public class GameConfig : ScriptableObject
     public LayerMask ElementLayer;
     public List<string> cities;
     public float SecondsInDay = 86400f;
-    public float TapSpeed = 0.15f;
+    public float durationCountAsHold = 0.25f;
 }

@@ -26,7 +26,7 @@ public class CameraHandler : MonoBehaviour
 
     void Update()
     {
-        if (Services.GameElementPlacer.IsPlacing() || Services.GameElementEditor.IsEditing || ExtensionUI.IsPointerOverUIObject()) return; 
+        if (Services.GameElementPlacer.IsPlacing() ||  ExtensionUI.IsPointerOverUIObject()) return; 
         if (Application.platform != RuntimePlatform.WindowsEditor)
         {
             HandleTouch();
