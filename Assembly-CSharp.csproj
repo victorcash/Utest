@@ -68,6 +68,7 @@
     <Compile Include="Assets\CameraHandler.cs" />
     <Compile Include="Assets\EditCamera.cs" />
     <Compile Include="Assets\ElementEditPanel.cs" />
+    <Compile Include="Assets\EthanBehaviour.cs" />
     <Compile Include="Assets\GameElementEditor.cs" />
     <Compile Include="Assets\Packages\DAX\Weather Effects\Clouds\Demo\DAX_MainCamera_Clouds.cs" />
     <Compile Include="Assets\Packages\DAX\Weather Effects\Lightning\Import Settings\Scripts\DAX_LightningCore.cs" />

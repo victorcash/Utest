@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementID: 2
   prefab: {fileID: 2916991507630670480, guid: 2c303507649923642be8aa144b99232d, type: 3}
-  elementIcon: {fileID: 0}
+  elementIcon: {fileID: 21300000, guid: 29502a384f966df4b93b7f34d9146ffa, type: 3}
   elementName: Humanoid

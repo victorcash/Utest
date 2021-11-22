@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementID: 4
   prefab: {fileID: 2046497251306876722, guid: fa9ed6f35da0d734a989883d39928112, type: 3}
-  elementIcon: {fileID: 0}
+  elementIcon: {fileID: 21300000, guid: ec0d8f8f8f9bc9c44b4d901041748149, type: 3}
   elementName: Cylinder

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementID: 5
   prefab: {fileID: 4037032797382878856, guid: 3d88cd3d68b861949b2e3f29d954c50e, type: 3}
-  elementIcon: {fileID: 0}
+  elementIcon: {fileID: 21300000, guid: 1914748e86f354648b8087e2b2c69ce6, type: 3}
   elementName: Car

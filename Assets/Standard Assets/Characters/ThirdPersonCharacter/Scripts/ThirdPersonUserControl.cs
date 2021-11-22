@@ -12,7 +12,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-
+        private Vector2 input;
         
         private void Start()
         {
@@ -32,6 +32,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character = GetComponent<ThirdPersonCharacter>();
         }
 
+        public void OnInput(Vector2 val)
+        {
+            input = val;
+        }
 
         private void Update()
         {
@@ -46,8 +50,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void FixedUpdate()
         {
             // read inputs
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+            float h = input.x;
+            float v = input.y;
             bool crouch = Input.GetKey(KeyCode.C);
 
             // calculate move direction to pass to character

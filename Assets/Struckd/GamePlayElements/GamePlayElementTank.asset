@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementID: 1
   prefab: {fileID: 669123355868203091, guid: 7c2c72109b4fc62478ad045f56d106e8, type: 3}
-  elementIcon: {fileID: 0}
-  elementName: StaticTank
+  elementIcon: {fileID: 21300000, guid: bf1d396ef7f72bc45a026cce5ac36be0, type: 3}
+  elementName: ToyTank

@@ -34,7 +34,7 @@ public class GameElementEditor : MonoBehaviour
                 }
             }
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && !ExtensionUI.IsPointerOverUIObject())
         {
             bool hasElement = false;
 
