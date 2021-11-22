@@ -239,8 +239,8 @@
     <Compile Include="Assets\Struckd\Scripts\Art\CameraHandler.cs" />
     <Compile Include="Assets\Struckd\Scripts\Art\EditCamera.cs" />
     <Compile Include="Assets\Struckd\Scripts\Art\FactionColorSetter.cs" />
-    <Compile Include="Assets\Struckd\Scripts\Art\TODDirectionalLight.cs" />
     <Compile Include="Assets\Struckd\Scripts\Art\ThunderControl.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Art\TodSystem.cs" />
     <Compile Include="Assets\Struckd\Scripts\Art\VFXController.cs" />
     <Compile Include="Assets\Struckd\Scripts\CsvHelper.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\MapData.cs" />

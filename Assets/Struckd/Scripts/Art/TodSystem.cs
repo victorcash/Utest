@@ -1,22 +1,17 @@
 ﻿using UnityEngine;
-public class TODDirectionalLight : MonoBehaviour
+public class TodSystem : MonoBehaviour
 {
     public Gradient lightColors;
     public AnimationCurve lightIntensities;
     public AnimationCurve atmosphereIntensities;
     public AnimationCurve atmosphereThickness;
-    private Light dLight;
+    public Light dLight;
     public float degreeMap = 180f;
     public float offset = 180f;
     public Material skybox;
 
     [Range(0f, 86400f)]
     public float sec;
-
-    private void Awake()
-    {
-        dLight = GetComponent<Light>();
-    }
     private void Start()
     {
         Services.EnvironmentController.OnTimeChanged += OnTimeChanged;
@@ -41,7 +36,7 @@ public class TODDirectionalLight : MonoBehaviour
         RenderSettings.ambientLight = lightColor * intensity;
         dLight.color = lightColor;
         dLight.intensity = intensity;
-        transform.rotation = Quaternion.Euler(Mathf.Lerp(-degreeMap, degreeMap, nVal) - offset, 0, 0);
+        transform.rotation = Quaternion.Euler(Mathf.Lerp(-degreeMap, degreeMap, nVal) - offset, 0f, 0f);
         skybox.SetFloat("_Exposure", atmosphereIntensities.Evaluate(nVal));
         skybox.SetFloat("_AtmosphereThickness", atmosphereThickness.Evaluate(nVal));
     }
