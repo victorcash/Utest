@@ -14,23 +14,10 @@ public class VFXController : MonoBehaviour
 
     public void Init()
     {
-        Services.GameStates.AddOnGameModeChangedListener(OnGameModeChanged);
         Services.EnvironmentController.OnFogChanged += SetFog;
         Services.EnvironmentController.OnRainChanged += SetRain;
         Services.EnvironmentController.OnSnowChanged += SetSnow;
         Services.EnvironmentController.OnThunderChanged += SetThunder;
-    }
-
-    private void OnGameModeChanged(GameMode gameMode)
-    {
-        if (gameMode == GameMode.Play)
-        { 
-        
-        }
-        else if (gameMode == GameMode.Edit)
-        { 
-        
-        }
     }
 
     public void SetRain(float val)
