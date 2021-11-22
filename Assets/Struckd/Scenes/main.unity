@@ -3306,7 +3306,7 @@ MonoBehaviour:
   appCanvas: {fileID: 1502425344}
   editCanvas: {fileID: 2138546502}
   playCanvas: {fileID: 1031730151}
-  todLight: {fileID: 0}
+  todLight: {fileID: 1312188749}
 --- !u!114 &1312188746
 MonoBehaviour:
   m_ObjectHideFlags: 0
