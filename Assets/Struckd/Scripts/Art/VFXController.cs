@@ -35,23 +35,23 @@ public class VFXController : MonoBehaviour
 
     public void SetRain(float val)
     {
-        TogglesByValue(val, rainGos);
+        ToggleObjectsByNormalizedValue(val, rainGos);
     }
 
     public void SetSnow(float val)
     {
-        TogglesByValue(val, snowGos);
+        ToggleObjectsByNormalizedValue(val, snowGos);
     }
 
     public void SetFog(float val)
     {
-        TogglesByValue(val, fogGos);
+        ToggleObjectsByNormalizedValue(val, fogGos);
     }
     public void SetThunder(float val)
     {
         thunderControl.SetThunder(val);
     }
-    void TogglesByValue(float val, List<GameObject> list)
+    void ToggleObjectsByNormalizedValue(float val, List<GameObject> list)
     {
         var count = Mathf.CeilToInt(val * list.Count);
         for (int i = 0; i < list.Count; i++)
