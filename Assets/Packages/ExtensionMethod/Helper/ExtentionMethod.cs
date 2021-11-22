@@ -270,15 +270,7 @@ public static class ExtensionUI
     public static bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-    #if UNITY_EDITOR
-            eventDataCurrentPosition.position = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
-    #else
-            eventDataCurrentPosition.position = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
-    #endif
-#else
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-#endif
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
@@ -287,16 +279,7 @@ public static class ExtensionUI
     public static int PointerOverUIObjectsCount()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-
-    #if UNITY_EDITOR
-            eventDataCurrentPosition.position = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
-    #else
-                eventDataCurrentPosition.position = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
-    #endif
-#else
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-#endif
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count;

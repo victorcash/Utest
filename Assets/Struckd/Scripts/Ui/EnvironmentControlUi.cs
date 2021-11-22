@@ -78,11 +78,9 @@ public class EnvironmentControlUi : MonoBehaviour
         var timestamp = wd.data.getCityByName.weather.timestamp;
         var jsonFormatted = wd.jsonFormatted;
         var timeZoneOffsetLookup = Services.Config.cities;
-        //failed to get timezone on mobile, so i just removed 1h from time to offset berlin
-        float offset = timeZoneOffsetLookup[cityName] * 3600 - 3600;
-        DateTime lastUpdateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
-        var lastUpdateTimeWithOffset = lastUpdateTime.AddSeconds(timestamp + offset).ToLocalTime();
-
+        float offset = timeZoneOffsetLookup[cityName] * 3600;
+        DateTime lastUpdateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        var lastUpdateTimeWithOffset = lastUpdateTime.AddSeconds(timestamp + offset);
         var result = $"City: {cityName}\n Weather: {weather}\n LastUpdateTime: {lastUpdateTimeWithOffset}";
         infoDisplay.text = result;
         jsonDisplay.text = $"JsonData: \n{jsonFormatted}";

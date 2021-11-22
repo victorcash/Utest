@@ -5,11 +5,8 @@ public class GameElementPlacer : MonoBehaviour
 {
     private GameElementBehaviour currentElement;
     private Camera editCamT => Services.SceneReferences.editCamera;
-#if UNITY_EDITOR
-    private Vector2 screenPos => Mouse.current.position.ReadValue();
-#else
-    private Vector2 screenPos => Touchscreen.current.primaryTouch.position.ReadValue();
-#endif
+    private Vector2 screenPos => Input.mousePosition;
+
     private int? queueId;
 
     public bool IsPlacing()
@@ -34,10 +31,6 @@ public class GameElementPlacer : MonoBehaviour
     Vector3 offset = Vector3.zero;
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
-        { 
-            currentElement = null;
-        }
         if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
             currentElement = null;
@@ -48,32 +41,26 @@ public class GameElementPlacer : MonoBehaviour
                 Services.Ui.ToggleElementList(true);
             }
         }
-        if (currentElement == null)
+        if (Input.GetMouseButtonDown(0) && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {
-            if (Input.GetMouseButtonDown(0) && ExtensionUI.PointerOverUIObjectsCount() == 0)
+            currentElement = null;
+            var ray = editCamT.ScreenPointToRay(screenPos);
+            var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
+            foreach (var hit in hits)
             {
-                var ray = editCamT.ScreenPointToRay(screenPos);
-                var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
-                foreach (var hit in hits)
+                var elemet = hit.collider.gameObject.GetComponent<GameElementBehaviour>();
+                if (elemet != null)
                 {
-                    var elemet = hit.collider.gameObject.GetComponent<GameElementBehaviour>();
-                    if (elemet != null)
-                    {
-                        currentElement = elemet;
-                        offset = PointerPostion(Vector3.up, Vector3.zero) - hit.collider.gameObject.transform.position;
-                        break;
-                    }
+                    currentElement = elemet;
+                    offset = PointerPostion(Vector3.up, Vector3.zero) - hit.collider.gameObject.transform.position;
+                    break;
                 }
             }
         }
-        else
+        if (Input.GetMouseButton(0) &&currentElement != null)
         {
-            if (Input.GetMouseButton(0))
-            {
-                var currentPos = currentElement.GetPos();
-                var targetPos = PointerPostion(Vector3.up, Vector3.zero) - offset;
-                currentElement.SetPos(targetPos);
-            }
+            var targetPos = PointerPostion(Vector3.up, Vector3.zero) - offset;
+            currentElement.SetPos(targetPos);
         }
         if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {

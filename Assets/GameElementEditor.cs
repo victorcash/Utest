@@ -5,11 +5,8 @@ public class GameElementEditor : MonoBehaviour
 {
     public GameElementBehaviour currentElement;
     private Camera editCamT => Services.SceneReferences.editCamera;
-#if UNITY_EDITOR
-    private Vector2 screenPos => Mouse.current.position.ReadValue();
-#else
-    private Vector2 screenPos => Touchscreen.current.primaryTouch.position.ReadValue();
-#endif
+    private Vector2 screenPos => Input.mousePosition;
+
     public bool IsEditing => currentElement != null;
     float mouseDownTimeStamp;
 
