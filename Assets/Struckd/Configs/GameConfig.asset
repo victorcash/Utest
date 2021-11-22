@@ -25,3 +25,5 @@ MonoBehaviour:
   - New York
   - Sydney
   - Hong kong
+  SecondsInDay: 86400
+  TapSpeed: 0.15

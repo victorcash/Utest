@@ -8,20 +8,20 @@ public class CityCardUi : MonoBehaviour
     private string cityName;
     public Button button;
     public TMP_Text cityDisplay;
-    private EnvironmentControlUi control;
+    private EnvironmentControlUi uiSupervisor;
     private void Awake()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(SetAsCurrentCity);
     }
-    public void SetupCard(string cityName, EnvironmentControlUi control)
+    public void SetupCard(string cityName, EnvironmentControlUi superviser)
     {
-        this.control = control;
+        this.uiSupervisor = superviser;
         this.cityName = cityName;
         cityDisplay.text = cityName;
     }
     private void SetAsCurrentCity()
     {
-        control.SetCurrentCity(cityName);
+        uiSupervisor.SetCurrentCity(cityName);
     }
 }

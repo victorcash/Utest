@@ -27,21 +27,25 @@ public class EnvironmentController : MonoBehaviour
     public float NormalizedToSeconds(float nval) => nval * Services.Config.SecondsInDay;
     public void SetRainIntensity(float val)
     {
+        rain = val;
         OnRainChanged(val);
     }
 
     public void SetFogIntensity(float val)
     {
+        fog = val;
         OnFogChanged(val);
     }
 
     public void SetThunderIntensity(float val)
     {
+        thunder = val;
         OnThunderChanged(val);
     }
 
     public void SetTime(float val)
     {
+        time = val;
         OnTimeChanged(val);
     }
 
@@ -49,18 +53,18 @@ public class EnvironmentController : MonoBehaviour
     {
         OnSnowChanged(val);
     }
-    public async void GetWeatherData(string cityName, Action<string> OnHaveData)
+    public async void GetWeatherData(string cityName, Action<WeatherData> OnHaveData)
     {
         var graph = Services.GraphApi;
         GraphApi.Query query = graph.GetQueryByName("GetCityByName", GraphApi.Query.Type.Query);
         query.SetArgs(new { name = cityName });
         UnityWebRequest request = await graph.Post(query);
         var json = request.downloadHandler.text;
-        var text = HttpHandler.FormatJson(json);
-        OnHaveData(text);
+        var formatted = HttpHandler.FormatJson(json);
         var wd = JsonConvert.DeserializeObject<WeatherData>(json);
-        Debug.Log(wd.data.getCityByName.name);
-        Debug.Log(wd.data.getCityByName.id);
+        wd.jsonRaw = json;
+        wd.jsonFormatted = formatted;
+        OnHaveData(wd);
     }
 }
 
