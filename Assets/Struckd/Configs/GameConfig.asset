@@ -19,11 +19,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   cities:
-  - London
-  - Berlin
-  - Moscow
-  - New York
-  - Sydney
-  - Hong kong
+    m_keys:
+    - Berlin
+    - London
+    - Moscow
+    - New York
+    - Hong Kong
+    - Sydney
+    m_values: 010000000000000003000000fbffffff080000000b000000
   SecondsInDay: 86400
-  TapSpeed: 0.15
+  durationCountAsHold: 0.15

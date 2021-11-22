@@ -20,6 +20,10 @@ public class EasyAccessUi : MonoBehaviour
 
     private void Test()
     {
+        var now = DateTime.UtcNow;
+        Debug.Log(now);
+        var localTime = now.AddSeconds(72000);
+        Debug.Log(localTime);
     }
 
     private void ClearMapBtn()

@@ -9,7 +9,10 @@ public class GameConfig : ScriptableObject
     public float testFval;
     public int CsvWidth;
     public LayerMask ElementLayer;
-    public List<string> cities;
+    public CitiesUTCOffsetDictionary cities;
     public float SecondsInDay = 86400f;
     public float durationCountAsHold = 0.25f;
 }
+
+[Serializable]
+public class CitiesUTCOffsetDictionary : SerializableDictionary<string, int> { }

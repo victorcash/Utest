@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class GameElementPlacer : MonoBehaviour
 {
     private GameElementBehaviour currentElement;
-    private GameMode gameMode => Services.GameStates.GetGameMode();
     private Camera editCamT => Services.SceneReferences.editCamera;
 #if UNITY_EDITOR
     private Vector2 screenPos => Mouse.current.position.ReadValue();
@@ -41,7 +40,20 @@ public class GameElementPlacer : MonoBehaviour
             queueId = null;
             Services.Ui.ToggleElementList(false);
         }
-
+        if (Input.GetMouseButton(0))
+        {
+            //holdTime += Time.deltaTime;
+            if (currentElement != null)// && holdTime > Services.Config.durationCountAsHold)
+            {
+                var target = PointerPostion(Vector3.up, Vector3.zero) - offset;
+                var current = currentElement.GetPos();
+                var distance = Vector3.Distance(target, current);
+                if (distance < 5f)
+                {
+                    currentElement.SetPos(PointerPostion(Vector3.up, Vector3.zero) - offset);
+                }
+            }
+        }
         if (Input.GetMouseButtonDown(0) && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {
             var ray = editCamT.ScreenPointToRay(screenPos);
@@ -70,25 +82,7 @@ public class GameElementPlacer : MonoBehaviour
                 if (!hasElement) currentElement = null;
             }
         }
-        if (Input.GetMouseButton(0))
-        {
-            holdTime += Time.deltaTime;
-            if (currentElement != null && holdTime > Services.Config.durationCountAsHold)
-            {
-                Debug.Log("SetPosition");
-                var target = PointerPostion(Vector3.up, Vector3.zero) - offset;
-                var current = currentElement.GetPos();
-                var distance = Vector3.Distance(target, current);
-                if (distance < 5f)
-                {
-                    currentElement.SetPos(PointerPostion(Vector3.up, Vector3.zero) - offset);
-                }
-                else
-                {
-                    currentElement = null;
-                }
-            }
-        }
+
         if (Input.GetMouseButtonUp(0)|| Input.GetMouseButtonUp(1))
         {
             holdTime = 0f;

@@ -73,18 +73,22 @@ public class EnvironmentControlUi : MonoBehaviour
 
     private void OnGetWeathData(WeatherData wd)
     {
+        TimeZoneInfo infos = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
+        var myOffset = infos.BaseUtcOffset;
         var cityName = wd.data.getCityByName.name;
         var weather = wd.data.getCityByName.weather.summary.title;
         var timestamp = wd.data.getCityByName.weather.timestamp;
         var jsonFormatted = wd.jsonFormatted;
+        var timeZoneOffsetLookup = Services.Config.cities;
+        float offset = timeZoneOffsetLookup[cityName] * 3600;
 
         DateTime lastUpdateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
-        lastUpdateTime = lastUpdateTime.AddSeconds(timestamp).ToLocalTime();
+        var lastUpdateTimeWithOffset = lastUpdateTime.AddSeconds((timestamp + offset)).ToLocalTime();
 
-        var result = $"City: {cityName}\n Weather: {weather}\n LastUpdateTime: {lastUpdateTime}";
+        var result = $"City: {cityName}\n Weather: {weather}\n LastUpdateTime: {lastUpdateTimeWithOffset}";
         infoDisplay.text = result;
         jsonDisplay.text = $"JsonData: \n{jsonFormatted}";
-
+        wd.timepastSinceToday = lastUpdateTimeWithOffset.TimeOfDay.TotalSeconds;
         UpdateEnviromentBasedOnData(wd);
     }
 
@@ -144,6 +148,7 @@ public class EnvironmentControlUi : MonoBehaviour
                 }
                 break;
         }
+        controller.SetTime((float)wd.timepastSinceToday);
         UpdateUIByData();
     }
 
@@ -154,14 +159,14 @@ public class EnvironmentControlUi : MonoBehaviour
         foreach (var city in cities)
         {
             var cityCard = Instantiate(cityCardPrefab, cityContent);
-            cityCard.SetupCard(city, this);
+            cityCard.SetupCard(city.Key, this);
         }
     }
 
     public void UpdateUIByData()
     {
-        timeSlider.SetValueWithoutNotify(controller.time/Services.Config.SecondsInDay);
-
+        timeSlider.SetValueWithoutNotify(controller.time);
+        timeText.text = Services.EnvironmentController.SecondsToTimeString(controller.time);
         rainSlider.SetValueWithoutNotify(controller.rain);
         fogSlider.SetValueWithoutNotify(controller.fog);
         thunderSlider.SetValueWithoutNotify(controller.thunder);
