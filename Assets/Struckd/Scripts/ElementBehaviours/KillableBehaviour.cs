@@ -7,6 +7,11 @@ public abstract class KillableBehaviour : GameElementBehaviour, IKillable, IFact
     [SerializeField] protected float hpMax = 100f;
     [SerializeField] protected Faction faction;
 
+    protected override void Start()
+    {
+        base.Start();
+        SetFaction(faction);
+    }
     public override string[] Serialize()
     {
         var entry = base.Serialize();
