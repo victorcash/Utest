@@ -67,6 +67,7 @@ public class EnvironmentControlUi : MonoBehaviour
 
     public void SetCurrentCity(string cityName)
     {
+        Services.Ui.FloatingNotification("Please wait...", 2f);
         Services.EnvironmentController.GetWeatherData(cityName, OnGetWeathData);
     }
 

@@ -39,3 +39,7 @@ MonoBehaviour:
     type: 3}
   cityCardPrefab: {fileID: 4541734140683465000, guid: 5d015aad2acad7743b45fe5519cceb68,
     type: 3}
+  notificationTxtUiPrefab: {fileID: 1865806103121494022, guid: 2bdfb9854fc4a28449278f8cc78ffc95,
+    type: 3}
+  saveLoadPanelUiPrefab: {fileID: 2863797210022610833, guid: 9de4933fd6be0204aafccc52093ef68e,
+    type: 3}

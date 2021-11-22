@@ -72,8 +72,6 @@
     <Compile Include="Assets\Packages\ExtensionMethod\Editor\ExtendedScriptableObjectDrawer.cs" />
     <Compile Include="Assets\Packages\ExtensionMethod\SerializableDictionary\Editor\SerializableDictionaryPropertyDrawer.cs" />
     <Compile Include="Assets\Packages\ExtensionMethod\UnityEditor\Editor\ScenePhysicsTool.cs" />
-    <Compile Include="Assets\Packages\RTS_Camera\Scripts\Editor\LayoutHelpers.cs" />
-    <Compile Include="Assets\Packages\RTS_Camera\Scripts\Editor\RTS_CameraEditor.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Editor\PackageChecker\PackageChecker.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Editor\ScriptingDefineUtils.cs" />

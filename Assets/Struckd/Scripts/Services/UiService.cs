@@ -12,10 +12,13 @@ public class UiService : ScriptableObject
     public ElementEditPanel elementEditPanelPrefab;
     public EnvironmentControlUi environmentControlUiPrefab;
     public CityCardUi cityCardPrefab;
+    public NotificationTxtUi notificationTxtUiPrefab;
+    public SaveLoadPanelUi saveLoadPanelUiPrefab;
 
     [NonSerialized] public ElementListUi elementListUi;
     [NonSerialized] public ElementEditPanel elementEditPanel;
     [NonSerialized] public EnvironmentControlUi environmentControlUi;
+    [NonSerialized] public SaveLoadPanelUi saveLoadPanelUi;
     public Canvas editCanvas => Services.SceneReferences.editCanvas;
     private Canvas appCanvas => Services.SceneReferences.appCanvas;
     private Canvas playCanvas => Services.SceneReferences.playCanvas;
@@ -25,13 +28,16 @@ public class UiService : ScriptableObject
         Services.GameStates.AddOnGameModeChangedListener(OnGameModeChanged);
         elementListUi = Instantiate(elementListUiPrefab, editCanvas.transform);
         elementEditPanel = Instantiate(elementEditPanelPrefab, editCanvas.transform);
+        saveLoadPanelUi = Instantiate(saveLoadPanelUiPrefab, editCanvas.transform);
+        saveLoadPanelUi.Init();
         environmentControlUi = Instantiate(environmentControlUiPrefab, editCanvas.transform);
         environmentControlUi.Init();
     }
 
-    public void FloatingNotification(string v)
+    public void FloatingNotification(string v, float duration)
     {
-        Debug.Log(v);
+        var notif = Instantiate(notificationTxtUiPrefab, appCanvas.transform);
+        notif.SetContent(v, duration);
     }
 
     private void OnGameModeChanged(GameMode gameMode)
@@ -56,7 +62,10 @@ public class UiService : ScriptableObject
     {
         environmentControlUi.ToggleVisibility(v);
     }
-
+    public void ToggleSaveLoadPanel(bool v)
+    {
+        saveLoadPanelUi.ToggleVisibility(v);
+    }
     public void GetUiPrefab(Type type)
     { 
     

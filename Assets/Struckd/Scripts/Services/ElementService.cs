@@ -72,7 +72,7 @@ public class ElementService
         return null;
     }
 
-    public void SaveElementsToMapData()
+    public void SaveElementsToMapData(int id)
     {
         var csv = new StringBuilder();
 
@@ -85,7 +85,7 @@ public class ElementService
             csv.AppendLine(newEntry);
         }
 
-        string filePath = Application.persistentDataPath + "/Maps/temp.csv";
+        string filePath = Application.persistentDataPath + $"/Maps/{id}.csv";
         var file = new FileInfo(filePath);
         file.Directory.Create();
         StreamWriter writer = File.CreateText(filePath);
@@ -108,10 +108,11 @@ public class ElementService
         return result;
     }
 
-    public void LoadElementsFromMapData(string filePath = "")
+    public void LoadElementsFromMapData(int id, string filePath = "")
     {
-        filePath = Application.persistentDataPath + "/Maps/temp.csv";
         Services.GameElement.RemoveAllElements();
+        filePath = Application.persistentDataPath + $"/Maps/{id}.csv";
+        if (!File.Exists(filePath)) return;
         StreamReader reader = new StreamReader(filePath);
         var csv = reader.ReadToEnd();
         reader.Close();

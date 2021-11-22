@@ -22,7 +22,7 @@ public class GameStates : MonoBehaviour
     private void SetGameAsEditMode()
     {
         Services.GameElement.RemoveAllElements();
-        Services.GameElement.LoadElementsFromMapData();
+        Services.GameElement.LoadElementsFromMapData(99);
         currentGameMode = GameMode.Edit;
         onGameModeChanged(currentGameMode);
     }
@@ -31,13 +31,13 @@ public class GameStates : MonoBehaviour
         var iPlayable = Services.GameElement.GetActivePlayable();
         if (iPlayable != null)
         {
-            Services.GameElement.SaveElementsToMapData();
+            Services.GameElement.SaveElementsToMapData(99);
             currentGameMode = GameMode.Play;
             onGameModeChanged(currentGameMode);
         }
         else
         {
-            Services.Ui.FloatingNotification("You need to set a playable character first!");
+            Services.Ui.FloatingNotification("You need to set a playable character first!", 5f);
         }
     }
     public GameMode GetGameMode() => currentGameMode;
