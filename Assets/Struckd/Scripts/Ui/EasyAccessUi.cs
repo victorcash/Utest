@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,10 +19,7 @@ public class EasyAccessUi : MonoBehaviour
 
     private void Test()
     {
-        var now = DateTime.UtcNow;
-        Debug.Log(now);
-        var localTime = now.AddSeconds(72000);
-        Debug.Log(localTime);
+        Debug.Log("Test!");
     }
 
     private void ClearMapBtn()

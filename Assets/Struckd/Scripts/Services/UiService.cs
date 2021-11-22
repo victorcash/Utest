@@ -66,10 +66,6 @@ public class UiService : ScriptableObject
     {
         saveLoadPanelUi.ToggleVisibility(v);
     }
-    public void GetUiPrefab(Type type)
-    { 
-    
-    }
 
     public void ToggleElementList(bool val)
     {

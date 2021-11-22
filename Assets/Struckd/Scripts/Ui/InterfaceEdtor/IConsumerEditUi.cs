@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class IConsumerEditUi : ElementInterfaceUi
+﻿public class IConsumerEditUi : ElementInterfaceUi
 {
 
 }
