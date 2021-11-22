@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fa7b8cdd5db833458806b84d41e291d, type: 3}
-  m_Name: GamePlayElementSkybox
+  m_Name: GamePlayElementCar
   m_EditorClassIdentifier: 
-  elementID: 0
-  prefab: {fileID: 0}
+  elementID: 5
+  prefab: {fileID: 4037032797382878856, guid: 3d88cd3d68b861949b2e3f29d954c50e, type: 3}
   elementIcon: {fileID: 0}
-  elementName: 
+  elementName: Car

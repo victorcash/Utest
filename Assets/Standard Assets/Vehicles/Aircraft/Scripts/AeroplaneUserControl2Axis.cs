@@ -8,8 +8,8 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
     public class AeroplaneUserControl2Axis : MonoBehaviour
     {
         // these max angles are only used on mobile, due to the way pitch and roll input are handled
-        public float maxRollAngle = 80;
-        public float maxPitchAngle = 80;
+        private float maxRollAngle = 40;
+        private float maxPitchAngle = 40;
 
         private float inputX;
         private float inputY;

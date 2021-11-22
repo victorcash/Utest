@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fa7b8cdd5db833458806b84d41e291d, type: 3}
-  m_Name: GamePlayElementSkybox
+  m_Name: GamePlayElementCylinder
   m_EditorClassIdentifier: 
-  elementID: 0
-  prefab: {fileID: 0}
+  elementID: 4
+  prefab: {fileID: 2046497251306876722, guid: fa9ed6f35da0d734a989883d39928112, type: 3}
   elementIcon: {fileID: 0}
-  elementName: 
+  elementName: Cylinder

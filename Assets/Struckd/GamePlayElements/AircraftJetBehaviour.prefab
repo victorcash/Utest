@@ -20543,7 +20543,7 @@ GameObject:
   - component: {fileID: 3242915403472082380}
   - component: {fileID: 727222702}
   m_Layer: 0
-  m_Name: AircraftJetBehaviour
+  m_Name: aircraftJetBehaviour
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20597,7 +20597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a6615124795442b98c1f03500003e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxEnginePower: 5
+  m_MaxEnginePower: 20
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
   m_RollEffect: 0.75
@@ -20623,8 +20623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b297a60c0ddf0ee4dabefaf158fb097d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRollAngle: 80
-  maxPitchAngle: 80
 --- !u!114 &3242915403472082376
 MonoBehaviour:
   m_ObjectHideFlags: 0

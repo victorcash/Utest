@@ -1,16 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityStandardAssets.Vehicles.Aeroplane;
+using UnityStandardAssets.Vehicles.Car;
 
-public class AirPlaneBehaviour : KillableBehaviour, IPlayable
+public class VehicleBehaviour : KillableBehaviour, IPlayable
 {
-    public AeroplaneUserControl2Axis aeroplaneUserControl2Axis;
-    public AeroplaneController aeroplaneController;
+    public CarUserControl carUserControl;
+    public CarController carController;
     public Transform cameraFollowRoot;
     public GameObject elementCamera;
     bool isActivePlable;
     private void Awake()
     {
-        aeroplaneUserControl2Axis = GetComponentInChildren<AeroplaneUserControl2Axis>();
+        carUserControl = GetComponentInChildren<CarUserControl>();
         OnGameModeChanged(GameMode.Edit);
     }
     public Transform CameraFollowRoot() => cameraFollowRoot;
@@ -27,7 +30,7 @@ public class AirPlaneBehaviour : KillableBehaviour, IPlayable
 
     public void JoyStickLeft(Vector2 val)
     {
-        aeroplaneUserControl2Axis.OnInputL(val);
+        carUserControl.OnInput(val);
     }
 
     public void JoyStickRight(Vector2 val)
@@ -56,26 +59,26 @@ public class AirPlaneBehaviour : KillableBehaviour, IPlayable
     {
         base.Deserialize(entry);
         if (bool.TryParse(entry.GetValue(CsvColumn.IsActivePlayable), out var result))
-        { 
+        {
             SetAsActivePlayable(result);
         }
     }
     protected override void OnGameModeChanged(GameMode gameMode)
     {
         base.OnGameModeChanged(gameMode);
-        var body = GetComponent<Rigidbody>();
+        var body = GetComponentInChildren<Rigidbody>();
 
         if (gameMode == GameMode.Play && isActivePlable)
         {
-            aeroplaneUserControl2Axis.enabled = true;
-            aeroplaneController.enabled = true;
+            carUserControl.enabled = true;
+            carController.enabled = true;
             elementCamera.SetActive(true);
             body.isKinematic = false;
         }
         else
         {
-            aeroplaneUserControl2Axis.enabled = false;
-            aeroplaneController.enabled = false;
+            carUserControl.enabled = false;
+            carController.enabled = false;
             elementCamera.SetActive(false);
             body.isKinematic = true;
         }

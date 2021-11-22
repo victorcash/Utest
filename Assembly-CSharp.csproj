@@ -158,9 +158,9 @@
     <Compile Include="Assets\Struckd\Scripts\EnvironmentController.cs" />
     <Compile Include="Assets\Struckd\Scripts\GameElementPlacer.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CharacterBehaviour.cs" />
-    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\CubeBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\GameElementBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\KillableBehaviour.cs" />
+    <Compile Include="Assets\Struckd\Scripts\GamePlayElements\StaticElementBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\GamePlayElements\TankBehaviour.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumable.cs" />
     <Compile Include="Assets\Struckd\Scripts\Interfaces\IConsumer.cs" />
@@ -203,6 +203,7 @@
     <Compile Include="Assets\TestUiObject.cs" />
     <Compile Include="Assets\ThunderControl.cs" />
     <Compile Include="Assets\VFXController.cs" />
+    <Compile Include="Assets\VehicleBehaviour.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Accordion\Accordion.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Accordion\AccordionElement.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Accordion\Tweening\FloatTween.cs" />
