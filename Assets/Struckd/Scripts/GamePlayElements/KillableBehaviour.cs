@@ -37,5 +37,11 @@ public abstract class KillableBehaviour : GameElementBehaviour, IKillable, IFact
     public virtual void SetFaction(Faction val)
     {
         faction = val;
+        var colorSetter = GetComponent<FactionColorSetter>();
+        if (colorSetter == null)
+        {
+            colorSetter = gameObject.AddComponent<FactionColorSetter>();
+        }
+        colorSetter.SetColor(val);
     }
 }

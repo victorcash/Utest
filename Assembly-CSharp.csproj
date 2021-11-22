@@ -151,6 +151,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SaveLoadPanelUi.cs" />
+    <Compile Include="Assets\Struckd\Scripts\Art\FactionColorSetter.cs" />
     <Compile Include="Assets\Struckd\Scripts\CsvHelper.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\MapData.cs" />
     <Compile Include="Assets\Struckd\Scripts\Data\WeatherData.cs" />
