@@ -36,7 +36,7 @@ public class TodSystem : MonoBehaviour
         RenderSettings.ambientLight = lightColor * intensity;
         dLight.color = lightColor;
         dLight.intensity = intensity;
-        transform.rotation = Quaternion.Euler(Mathf.Lerp(-degreeMap, degreeMap, nVal) - offset, 0f, 0f);
+        dLight.transform.rotation = Quaternion.Euler(Mathf.Lerp(-degreeMap, degreeMap, nVal) - offset, 0f, 0f);
         skybox.SetFloat("_Exposure", atmosphereIntensities.Evaluate(nVal));
         skybox.SetFloat("_AtmosphereThickness", atmosphereThickness.Evaluate(nVal));
     }
