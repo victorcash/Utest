@@ -65,12 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\graphQl-client\Scripts\Editor\GraphApiEditor.cs" />
-    <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-    <Compile Include="Assets\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
-    <Compile Include="Assets\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
-    <Compile Include="Assets\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
-    <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
-    <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -682,22 +676,6 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{BA613456-DBDF-819C-4BA8-5A69E0DAFBD2}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="StompyRobot.SRDebugger.csproj">
-      <Project>{6B7EEFCD-0B36-B392-576B-904D3C1232DA}</Project>
-      <Name>StompyRobot.SRDebugger</Name>
-    </ProjectReference>
-    <ProjectReference Include="StompyRobot.SRDebugger.Editor.csproj">
-      <Project>{E52B4267-2BFA-EAF0-ACD6-6EA75114860F}</Project>
-      <Name>StompyRobot.SRDebugger.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="StompyRobot.SRF.Editor.csproj">
-      <Project>{26797B7B-D1E9-126E-DB0A-4086DA8C2234}</Project>
-      <Name>StompyRobot.SRF.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="StompyRobot.SRF.csproj">
-      <Project>{20DF80A4-2305-3068-96DD-70F42AA07365}</Project>
-      <Name>StompyRobot.SRF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
