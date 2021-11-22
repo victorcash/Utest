@@ -12,6 +12,11 @@ public class GameElementEditor : MonoBehaviour
 
     void Update()
     {
+        if (Services.GameStates.GetGameMode() == GameMode.Play)
+        {
+            currentElement = null;
+            return;
+        }
         var ray = editCamT.ScreenPointToRay(screenPos);
         var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
 

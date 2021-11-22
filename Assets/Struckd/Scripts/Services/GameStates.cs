@@ -28,10 +28,10 @@ public class GameStates : MonoBehaviour
     }
     private void SetGameAsPlayMode()
     {
+        Services.GameElement.SaveElementsToMapData(99);
         var iPlayable = Services.GameElement.GetActivePlayable();
         if (iPlayable != null)
         {
-            Services.GameElement.SaveElementsToMapData(99);
             currentGameMode = GameMode.Play;
             onGameModeChanged(currentGameMode);
         }
