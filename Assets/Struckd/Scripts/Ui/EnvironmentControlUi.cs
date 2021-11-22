@@ -73,17 +73,15 @@ public class EnvironmentControlUi : MonoBehaviour
 
     private void OnGetWeathData(WeatherData wd)
     {
-        TimeZoneInfo infos = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
-        var myOffset = infos.BaseUtcOffset;
         var cityName = wd.data.getCityByName.name;
         var weather = wd.data.getCityByName.weather.summary.title;
         var timestamp = wd.data.getCityByName.weather.timestamp;
         var jsonFormatted = wd.jsonFormatted;
         var timeZoneOffsetLookup = Services.Config.cities;
-        float offset = timeZoneOffsetLookup[cityName] * 3600;
-
+        //failed to get timezone on mobile, so i just removed 1h from time to offset berlin
+        float offset = timeZoneOffsetLookup[cityName] * 3600 - 3600;
         DateTime lastUpdateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
-        var lastUpdateTimeWithOffset = lastUpdateTime.AddSeconds((timestamp + offset)).ToLocalTime();
+        var lastUpdateTimeWithOffset = lastUpdateTime.AddSeconds(timestamp + offset).ToLocalTime();
 
         var result = $"City: {cityName}\n Weather: {weather}\n LastUpdateTime: {lastUpdateTimeWithOffset}";
         infoDisplay.text = result;

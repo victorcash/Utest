@@ -11,7 +11,7 @@ public class GameElementPlacer : MonoBehaviour
     private Vector2 screenPos => Touchscreen.current.primaryTouch.position.ReadValue();
 #endif
     private int? queueId;
-    private float holdTime;
+
     public bool IsPlacing()
     {
         return queueId != null || currentElement != null;
@@ -34,32 +34,26 @@ public class GameElementPlacer : MonoBehaviour
     Vector3 offset = Vector3.zero;
     void Update()
     {
-        if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
-        {
-            currentElement = Services.GameElement.CreateGamePlayElement((int)queueId);
-            queueId = null;
-            Services.Ui.ToggleElementList(false);
+        if (Input.GetMouseButtonUp(0))
+        { 
+            currentElement = null;
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
-            //holdTime += Time.deltaTime;
-            if (currentElement != null)// && holdTime > Services.Config.durationCountAsHold)
+            currentElement = null;
+            queueId = null;
+            offset = Vector3.zero;
+            if (!Services.GameElementEditor.IsEditing)
             {
-                var target = PointerPostion(Vector3.up, Vector3.zero) - offset;
-                var current = currentElement.GetPos();
-                var distance = Vector3.Distance(target, current);
-                if (distance < 5f)
-                {
-                    currentElement.SetPos(PointerPostion(Vector3.up, Vector3.zero) - offset);
-                }
+                Services.Ui.ToggleElementList(true);
             }
         }
-        if (Input.GetMouseButtonDown(0) && ExtensionUI.PointerOverUIObjectsCount() == 0)
+        if (currentElement == null)
         {
-            var ray = editCamT.ScreenPointToRay(screenPos);
-            var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
-            if (currentElement == null)
+            if (Input.GetMouseButtonDown(0) && ExtensionUI.PointerOverUIObjectsCount() == 0)
             {
+                var ray = editCamT.ScreenPointToRay(screenPos);
+                var hits = Physics.RaycastAll(ray, Mathf.Infinity, Services.Config.ElementLayer);
                 foreach (var hit in hits)
                 {
                     var elemet = hit.collider.gameObject.GetComponent<GameElementBehaviour>();
@@ -71,28 +65,21 @@ public class GameElementPlacer : MonoBehaviour
                     }
                 }
             }
-            else
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
             {
-                var hasElement = false;
-                foreach (var hit in hits)
-                {
-                    var elemet = hit.collider.gameObject.GetComponent<GameElementBehaviour>();
-                    hasElement |= elemet != null;
-                }
-                if (!hasElement) currentElement = null;
+                var currentPos = currentElement.GetPos();
+                var targetPos = PointerPostion(Vector3.up, Vector3.zero) - offset;
+                currentElement.SetPos(targetPos);
             }
         }
-
-        if (Input.GetMouseButtonUp(0)|| Input.GetMouseButtonUp(1))
+        if (queueId != null && ExtensionUI.PointerOverUIObjectsCount() == 0)
         {
-            holdTime = 0f;
-            currentElement = null;
+            currentElement = Services.GameElement.CreateGamePlayElement((int)queueId);
             queueId = null;
-            offset = Vector3.zero;
-            if (!Services.GameElementEditor.IsEditing)
-            { 
-                Services.Ui.ToggleElementList(true);
-            }
+            Services.Ui.ToggleElementList(false);
         }
     }
 }
